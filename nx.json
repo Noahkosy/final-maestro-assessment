@@ -34,11 +34,24 @@
     },
     "web-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "web"
-      ]
+      "implicitDependencies": ["web"]
     },
     "ui": {
+      "tags": []
+    },
+    "angcomp": {
+      "tags": []
+    },
+    "task-designs": {
+      "tags": []
+    },
+    "task-designs-angular": {
+      "tags": []
+    },
+    "task-design": {
+      "tags": []
+    },
+    "task-design-angular": {
       "tags": []
     }
   }

@@ -208,6 +208,164 @@
           }
         }
       }
+    },
+    "angcomp": {
+      "projectType": "library",
+      "root": "libs/angcomp",
+      "sourceRoot": "libs/angcomp/src",
+      "prefix": "nxlp",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/angcomp/src/**/*.ts",
+              "libs/angcomp/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/angcomp/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "task-designs": {
+      "projectType": "library",
+      "schematics": {
+        "@nxext/stencil:component": {
+          "style": "scss",
+          "storybook": false
+        }
+      },
+      "root": "libs/task-designs",
+      "sourceRoot": "libs/task-designs/src",
+      "architect": {
+        "build": {
+          "builder": "@nxext/stencil:build",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/task-designs/stencil.config.ts"
+          }
+        },
+        "test": {
+          "builder": "@nxext/stencil:test",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/task-designs/stencil.config.ts"
+          }
+        },
+        "e2e": {
+          "builder": "@nxext/stencil:e2e",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/task-designs/stencil.config.ts"
+          }
+        },
+        "serve": {
+          "builder": "@nxext/stencil:build",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/task-designs/stencil.config.ts",
+            "serve": true,
+            "watch": true
+          }
+        }
+      }
+    },
+    "task-designs-angular": {
+      "projectType": "library",
+      "root": "libs/task-designs-angular",
+      "sourceRoot": "libs/task-designs-angular/src",
+      "prefix": "nxlp",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/task-designs-angular/src/**/*.ts",
+              "libs/task-designs-angular/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/task-designs-angular/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "task-design": {
+      "projectType": "library",
+      "schematics": {
+        "@nxext/stencil:component": {
+          "style": "scss",
+          "storybook": false
+        }
+      },
+      "root": "libs/task-design",
+      "sourceRoot": "libs/task-design/src",
+      "architect": {
+        "test": {
+          "builder": "@nxext/stencil:test",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/task-design/stencil.config.ts"
+          }
+        },
+        "e2e": {
+          "builder": "@nxext/stencil:e2e",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/task-design/stencil.config.ts"
+          }
+        },
+        "build": {
+          "builder": "@nxext/stencil:build",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/task-design/stencil.config.ts"
+          }
+        },
+        "serve": {
+          "builder": "@nxext/stencil:build",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/task-design/stencil.config.ts",
+            "serve": true,
+            "watch": true
+          }
+        }
+      }
+    },
+    "task-design-angular": {
+      "projectType": "library",
+      "root": "libs/task-design-angular",
+      "sourceRoot": "libs/task-design-angular/src",
+      "prefix": "nxlp",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/task-design-angular/src/**/*.ts",
+              "libs/task-design-angular/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/task-design-angular/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
@@ -249,11 +407,18 @@
       }
     },
     "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
       "unitTestRunner": "jest",
       "e2eTestRunner": "cypress"
     },
     "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
       "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
     }
   },
   "defaultProject": "web"

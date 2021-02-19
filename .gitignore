@@ -37,3 +37,5 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+libs/task-designs-angular/**/generated
+libs/task-design-angular/**/generated

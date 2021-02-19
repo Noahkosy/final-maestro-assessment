@@ -1,0 +1,84 @@
+form {
+  /* Center the form on the page */
+  position: relative;
+    margin: 0px auto;
+    width: 590px;
+    height: 740px;
+    padding: 1em;
+    border: 2px solid rgb(234, 237, 243);
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+label {
+  font-family: 'Roboto';
+  font-size: 12px;
+  color: #9EA0A5;
+  margin-top: 30px;
+  margin-bottom: 7px;
+}
+
+section {
+  width: 300px;
+  margin-left: 25px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+input,label {
+  /* Uniform size & alignment */
+  display: block;
+  width: 90px;
+  
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 16px 'Roboto', sans-serif;
+
+  /* Uniform text field size */
+  width: 480px;
+  
+
+  /* Match form field borders */
+  border: 2px solid #EAEDF3;
+  border-radius: 5px;
+  padding: 8px;
+
+}
+
+input:focus,
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #1665D8;
+}
+
+textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* Provide space to type some text */
+  height: 5em;
+  resize: none;
+}
+
+.dashes{
+  border: 2px dashed #EAEDF3;
+}
+
+.sm-box{
+  width: 200px;
+}
+
+

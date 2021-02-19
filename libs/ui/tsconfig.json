@@ -15,7 +15,7 @@
     "target": "es2017",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "jsxFactory": "h"
   },
   "include": [

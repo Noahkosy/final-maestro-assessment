@@ -10,27 +10,19 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nxlp/ui": [
-        "libs/ui/src/index.ts"
-      ],
-      "@nxlp/ui/loader": [
-        "dist/libs/ui/loader"
-      ]
+      "@nxlp/ui": ["libs/ui/src/index.ts"],
+      "@nxlp/ui/loader": ["dist/libs/ui/loader"],
+      "@nxlp/task-design": ["libs/task-design/src/index.ts"],
+      "@nxlp/task-design-angular": ["libs/task-design-angular/src/index.ts"],
+
+      "@nxlp/task-design/loader" : ["dist/libs/task-design/loader/index.cjs.js"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }
