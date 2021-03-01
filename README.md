@@ -1,3 +1,7 @@
+## HOW TO GET IT RUNNING   
+I edited the stencil section below to address the issues in running the project. Basically I had to create a new library for my stencil components because I had trouble working with the preexisting UI library. Follow the steps below as before until the stencil section. 
+
+
 ## Your Client
 
 A company has come to you, impressed by your portfolio. They would like you to build the first phase of a responsive web application for them with the potential to keep working with you if this phase goes well.
@@ -49,20 +53,15 @@ However, this codebase has been pieced together over time with no clear architec
 yarn install
 ```
 
-### [Stencil](https://stenciljs.com/docs/introduction) Library (`/libs/ui`)
+### [Stencil](https://stenciljs.com/docs/introduction) Library (`/libs/task-design`)
 
-```
-yarn run ui:build
+-- START OF NEW INSTRUCTIONS --
 
-// or, to watch for file changes
-yarn run ui:dev
-```
+nx serve task-design
 
-After receiving the assets, you have already set up 
+-run this in local development before running 'yarn start web' below. For whatever reason I was unable to run a build command on a library that I created. 
 
-- font families (`fonts/font.css`)
-- brand colors (`src/css/_theme.scss`)
-- an svg icon component (`src/components/design-system/icon`)
+-- END OF NEW INSTRUCTIONS -- 
 
 ### [Storybook](https://storybook.js.org/) (`/libs/ui/.storybook`)
 
