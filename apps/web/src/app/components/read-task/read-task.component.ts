@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { FirestoreService } from 'apps/web/src/app/services/firestore.service'
+import { ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'nxlp-read-task',
@@ -8,18 +9,25 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class ReadTaskComponent implements OnInit {
 
-  read = {
-    tags: 'Work',
-    title: 'Loop Website Redesign',
-    description: 'Redesign the site to reflect the evolvement of Loop. The site aims to be responsive and really cool.',
-    date: '2/19/2021',
-    notes: 'Sections: background story, product, price, about',
+  constructor( private route: ActivatedRoute,
+               private fireservice: FirestoreService) { 
   }
 
-  constructor(firestore: AngularFirestore) { 
+  read:any;
+
+  getTask() {
+    const id = this.route.snapshot.paramMap.get('id')
+    this.fireservice.getDoc(id).subscribe((doc) => {
+      if (doc.exists) {
+        this.read = doc.data();
+      } else {
+        console.log('No such document!')
+      }
+    })
   }
 
   ngOnInit(): void {
+    this.getTask()
   }
 
 }

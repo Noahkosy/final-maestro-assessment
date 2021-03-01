@@ -17,8 +17,8 @@ export namespace Components {
         "date": string;
         "description": string;
         "img": string;
+        "labels": string;
         "notes": string;
-        "tags": string;
     }
     interface TaskForm {
         "method": any;
@@ -61,8 +61,8 @@ declare namespace LocalJSX {
         "date"?: string;
         "description"?: string;
         "img"?: string;
+        "labels"?: string;
         "notes"?: string;
-        "tags"?: string;
     }
     interface TaskForm {
         "method"?: any;

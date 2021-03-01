@@ -16,7 +16,7 @@
 
 <div class="container ">
     <div class="row flex justify-content-center">
-        <div class="col-lg-4 cards" routerLink='lazy-read'*ngFor='let task of allTasks' >
+        <div class="col-lg-4 cards" routerLink='/lazy-read/{{task.taskid}}'*ngFor='let task of allTasks' >
             <task-card
                 tags='{{task.labels}}'
                 title='{{task.title}}'

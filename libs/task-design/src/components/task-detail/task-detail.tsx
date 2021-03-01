@@ -11,7 +11,7 @@ export class TaskDetail {
 
   @Prop() description: string;
   
-  @Prop() tags: string;
+  @Prop() labels: string;
 
   @Prop() date: string;
 
@@ -34,7 +34,7 @@ export class TaskDetail {
 
         <p class='labels'>LABELS</p>
         <div class="read-labels">
-          <p>{this.tags}</p>
+          <p>{this.labels}</p>
         </div>
 
         <p class='due-date'>DUE DATE</p>

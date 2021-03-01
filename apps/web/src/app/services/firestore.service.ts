@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,7 +17,15 @@ export class FirestoreService {
   }
 
   getTasks() {
-    return this.firestore.collection('tasks').valueChanges();
+    return this.firestore.collection("tasks").valueChanges({ idField:'taskid'});
+  }
+
+  getDoc(id:string) {
+    return this.firestore.collection('tasks').doc(id).get();
+  }
+
+  getTask(id:string) {
+    return this.firestore.collection("tasks").doc(id)
   }
 
   updateTask(data) {

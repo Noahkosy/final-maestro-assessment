@@ -12,8 +12,8 @@
 | `date`        | `date`        |             | `string` | `undefined` |
 | `description` | `description` |             | `string` | `undefined` |
 | `img`         | `img`         |             | `string` | `undefined` |
+| `labels`      | `labels`      |             | `string` | `undefined` |
 | `notes`       | `notes`       |             | `string` | `undefined` |
-| `tags`        | `tags`        |             | `string` | `undefined` |
 
 
 ----------------------------------------------

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from 'apps/web/src/app/services/firestore.service'
-import { TaskInterface } from 'apps/web/src/models/task-interface'
 
 @Component({
   selector: 'nxlp-dashboard',
@@ -11,7 +10,7 @@ export class DashboardComponent implements OnInit {
 
   constructor( private firestore: FirestoreService) { }
 
-  allTasks: TaskInterface[];
+  allTasks: any;
 
    getAllProducts(): void { 
     this.firestore.getTasks()
