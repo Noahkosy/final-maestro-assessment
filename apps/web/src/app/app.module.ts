@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 
@@ -20,7 +21,8 @@ import { FirestoreService } from 'apps/web/src/app/services/firestore.service';
   declarations: [AppComponent, DashboardComponent,AddTaskComponent,ReadTaskComponent],
   imports: [BrowserModule, AppRoutingModule, 
     AngularFirestoreModule, AngularFireDatabaseModule, 
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    ReactiveFormsModule
   ],
   providers:[FirestoreService,],
   bootstrap:[AppComponent],
