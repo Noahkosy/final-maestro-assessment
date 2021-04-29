@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from 'apps/web/src/app/services/firestore.service'
+import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms'
 
 
 
@@ -12,23 +13,26 @@ import { FirestoreService } from 'apps/web/src/app/services/firestore.service'
 
 export class AddTaskComponent implements OnInit {
 
-  constructor( private firestore: FirestoreService) { }
+  constructor(
+    private firestore: FirestoreService,
+    private builder: FormBuilder,
+  ) { }
 
-  test = {
-    title: "bob" ,
-    description:'billy' ,
-    labels: 'edd',
-    date: 'james',
-    notes: 'eard'
-  }
+  FormData: FormGroup;
 
-  addTaskHandler(data) {
+  onSubmit(data) {
     this.firestore.createTask(data)
   }
 
-  
   ngOnInit(): void {
-    
+    this.FormData = this.builder.group({
+      title: new FormControl ('',[Validators.required]),
+      thumbnail: new FormControl (''),
+      description: new FormControl (''),
+      labels: new FormControl (''),
+      duedate: new FormControl ('',[Validators.required]),
+      notes: new FormControl (''),
+    })
   }
 
 }
