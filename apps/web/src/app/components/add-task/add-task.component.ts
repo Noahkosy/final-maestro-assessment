@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FirestoreService } from 'apps/web/src/app/services/firestore.service'
-import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms'
+import { FirestoreService } from 'apps/web/src/app/services/firestore.service';
+import { FormControl, FormBuilder, FormGroup, Validators, } from '@angular/forms';
+import { PrefixValidation } from '../../validators/custom-validator';
+
 
 
 
@@ -8,7 +10,6 @@ import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms'
   selector: 'nxlp-add-task',
   templateUrl: './add-task.component.html',
   styleUrls: ['./add-task.component.scss'],
-  
 })
 
 export class AddTaskComponent implements OnInit {
@@ -21,17 +22,19 @@ export class AddTaskComponent implements OnInit {
   FormData: FormGroup;
 
   onSubmit(data) {
-    this.firestore.createTask(data)
+    this.firestore.createTask(data);
+    alert('Your task has been submitted!')
   }
 
   ngOnInit(): void {
     this.FormData = this.builder.group({
-      title: new FormControl ('',[Validators.required]),
+      taskTitle: new FormControl ('', [PrefixValidation]),
       thumbnail: new FormControl (''),
       description: new FormControl (''),
       labels: new FormControl (''),
-      duedate: new FormControl ('',[Validators.required]),
+      duedate: new FormControl (''),
       notes: new FormControl (''),
+      rating: new FormControl ('',[Validators.required])
     })
   }
 

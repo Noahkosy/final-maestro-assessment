@@ -12,11 +12,12 @@ export class DashboardComponent implements OnInit {
 
   allTasks: any;
 
+  color: string;
+
    getAllProducts(): void { 
     this.firestore.getTasks()
     .subscribe(res => (this.allTasks = res));
-      console.log(this.allTasks)
-      
+      console.log(this.allTasks)     
   }
 
   ngOnInit(): void { 

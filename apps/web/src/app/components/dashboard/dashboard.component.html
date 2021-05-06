@@ -14,14 +14,25 @@
     </div>
 </div>
 
+<h1>My First Attribute Directive</h1>
+<h2>Pick a highlight color</h2>
+<div>
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='Yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='Cyan'">Cyan
+</div>
+
+<p [nxlpHighlight]="color" defaultColor="violet">Highlight me too!</p>
+
 <div class="container ">
     <div class="row flex justify-content-center">
         <div class="col-lg-4 cards" routerLink='/lazy-read/{{task.taskid}}'*ngFor='let task of allTasks' >
-            <task-card
+            <task-card 
                 tags='{{task.labels}}'
-                title='{{task.title}}'
+                taskTitle='{{task.taskTitle}}'
                 description='{{task.description}}'
-                date='{{task.date}}'>
+                date='{{task.duedate}}'>
+                <p [nxlpHighlight]="color">hello world</p>
             </task-card>
         </div>
     </div>

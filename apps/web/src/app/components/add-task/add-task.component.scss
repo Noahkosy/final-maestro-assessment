@@ -27,6 +27,7 @@ svg {
 
   // SAVE BUTTON
   .save-button{
+    justify-self: stretch;
     display: inline-block;
     border: none;
     border-radius: 5px;
@@ -130,14 +131,18 @@ svg {
     form {
       /* Center the form on the page */
       position: relative;
-        margin: 0px auto;
-        width: 590px;
-        height: 740px;
-        padding: 1em;
-        border: 2px solid rgb(234, 237, 243);
-        border-radius: 5px;
-        box-sizing: border-box;
-        background-color: white;
+      margin: 0px auto;
+      width: 590px;
+      height: 740px;
+      padding: 1em;
+      border: 2px solid rgb(234, 237, 243);
+      border-radius: 5px;
+      box-sizing: border-box;
+      background-color: white;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      justify-items: center;
     }
     
     label {
