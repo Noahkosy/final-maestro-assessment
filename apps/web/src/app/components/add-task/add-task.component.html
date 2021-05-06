@@ -17,40 +17,48 @@
     </div>
 </div>
 
+<h4>Value: {{ FormData.get('rating').value }}</h4>
+<h4>Is Touched: {{ FormData.get('rating').touched }}</h4>
+<h4>Is Dirty: {{ FormData.get('rating').dirty }}</h4>
+<h4>Has Error: {{ FormData.get('rating').hasError('required') }}</h4>
+
+<h4>Value: {{ FormData.get('taskTitle').value }}</h4>
+<h4>Is Touched: {{ FormData.get('taskTitle').touched }}</h4>
+<h4>Is Dirty: {{ FormData.get('taskTitle').dirty }}</h4>
+<h4>Has Error: {{ FormData.get('taskTitle').hasError('PrefixValidation') }}</h4>
+
 <div>
     <form [formGroup]='FormData' (ngSubmit)="onSubmit(FormData.value)">
 
-        <div class="form-control">
-            <label for="task-name">Task Name</label>
-            <input type="text" class="form-control" name="task-name" formControlName="title">
-        </div>
+        <form-field label='Rating' for='stars'>
+            <nxlp-rating-input id="stars" formControlName='rating'></nxlp-rating-input>
+        </form-field>
 
-        <div class="form-control">
-            <label for="thumbnail">Thumbnail</label>
-            <input type="file" class="form-control" name="thumbnail" formControlName="thumbnail"> 
-        </div>
+        <form-field label='Task Name' for='name'>
+            <input type="text" id="name" formControlName="taskTitle">
+        </form-field>
 
-        <div class="form-control">
-            <label for="description">Description</label>
-            <input type="text" class="form-control" name="descripiton" formControlName="description">
-        </div>
+        <form-field label='Thumbnail' for='pic'>
+            <input type="file" id='pic' formControlName="thumbnail">
+        </form-field>
 
-        <div class="form-control">
-            <label for="labels">Labels</label>
-            <input type="text" class="form-control" name="Labels" formControlName="labels">
-        </div>
+        <form-field label='Tags' for='tags'>
+            <input type="text" id='tags' formControlName="labels">
+        </form-field>
 
-        <div class="form-control">
-            <label for="due-date">Due Date</label>
-            <input type="datetime-local" class="form-control" name="due date" formControlName="duedate">
-        </div>
+        <form-field label='Description' for='description'>
+            <input type="text" id="description" formControlName="description">
+        </form-field>
 
-        <div class="form-control">
-            <label for="notes">Notes</label>
-            <input type="text" class="form-control" name="notes" formControlName="notes">
-        </div>
+        <form-field label='Due Date' for='date'>
+            <input type="date" placeholder="MM/DD/YYYY" id="date" formControlName="duedate">
+        </form-field>
 
-        <button type="submit" class="save-button m-1">Save</button>
+        <form-field label='Notes' for='notes'>
+            <input type="text" id="notes" formControlName="notes">
+        </form-field>
+
+        <button type="submit" class="save-button m-1" [disabled]="!FormData.valid">Save</button>
 
     </form>
 </div>

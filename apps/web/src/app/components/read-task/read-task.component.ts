@@ -15,19 +15,10 @@ export class ReadTaskComponent implements OnInit {
 
   read:any;
 
-  getTask() {
-    const id = this.route.snapshot.paramMap.get('id')
-    this.fireservice.getDoc(id).subscribe((doc) => {
-      if (doc.exists) {
-        this.read = doc.data();
-      } else {
-        console.log('No such document!')
-      }
-    })
-  }
-
   ngOnInit(): void {
-    this.getTask()
+    this.route.data.subscribe((data) => {
+      this.read = data;
+    })
   }
 
 }
