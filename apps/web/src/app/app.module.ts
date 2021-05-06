@@ -14,17 +14,21 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 
-import { FirestoreService } from 'apps/web/src/app/services/firestore.service';
+import {  myDatePipe } from './pipes/my-date-pipe';
+import { HighlightDirective } from './directives/highlight.directive';
+import { RatingInputComponent } from './components/rating-input/rating-input.component';
+
 
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent,AddTaskComponent,ReadTaskComponent],
+  declarations: [AppComponent, DashboardComponent,AddTaskComponent,ReadTaskComponent, myDatePipe, HighlightDirective, RatingInputComponent],
   imports: [BrowserModule, AppRoutingModule, 
     AngularFirestoreModule, AngularFireDatabaseModule, 
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+  
   ],
-  providers:[FirestoreService,],
+  providers:[],
   bootstrap:[AppComponent],
   schemas:[ CUSTOM_ELEMENTS_SCHEMA ],
 })
