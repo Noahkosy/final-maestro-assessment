@@ -13,7 +13,7 @@
 | `description` | `description` |             | `string` | `undefined` |
 | `img`         | `img`         |             | `string` | `undefined` |
 | `tags`        | `tags`        |             | `string` | `undefined` |
-| `title`       | `title`       |             | `string` | `undefined` |
+| `taskTitle`   | `task-title`  |             | `string` | `undefined` |
 
 
 ----------------------------------------------
