@@ -1,18 +1,13 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from 'apps/web/src/app/components/dashboard/dashboard.component';
+import { TaskDashboardComponent } from './tasks/task-dashboard/task-dashboard.component';
 
 
 const routes:Routes = [ 
-  { path: '', component: DashboardComponent, pathMatch: 'full' },
-  {
-    path: 'lazy-add',
-    loadChildren: () => import('apps/web/src/app/routers/lazy-add/lazy-add.module').then(m => m.LazyAddModule)
-  },
-  {
-    path: 'lazy-read',
-    loadChildren: () => import('apps/web/src/app/routers/lazy-read/lazy-read.module').then(m => m.LazyReadModule)
-  }
+  { path: 'tasks', component: TaskDashboardComponent,},
+  { path: 'tasks', loadChildren: () => import('./tasks/task.module').then(m => m.TaskModule) },
+  { path: 'tasks', loadChildren: () => import('./tasks/task.module').then(m => m.TaskModule)},
+  { path: '**', component: TaskDashboardComponent, },
 ]
 
 
