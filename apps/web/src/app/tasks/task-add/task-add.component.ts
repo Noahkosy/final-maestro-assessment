@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormBuilder, FormGroup, } from '@angular/forms';
+import { FormControl, FormBuilder, FormGroup, Form, Validators, } from '@angular/forms';
 import { FirestoreService } from '../../core/services/firestore.service';
+import { FutureDateValidation } from './future-date.validator';
 
 @Component({
   selector: 'nxlp-task-add',
@@ -15,24 +16,28 @@ export class TaskAddComponent implements OnInit {
     private builder: FormBuilder,
   ) { }
 
-  FormData: FormGroup;
+  formData: FormGroup;
 
   onSubmit(data) {
     this.firestore.createTask(data);
     alert('Your task has been submitted!');
-    this.FormData.reset()
+    this.formData.reset();
     // window.location.assign('') ** or just send back to home **
   }
 
+  validStatement(form: FormGroup){
+    console.log('Valid?', form.valid);
+    console.log('duedate', form.value.duedate);
+  }
+
   ngOnInit(): void {
-    this.FormData = this.builder.group({
-      taskTitle: new FormControl (''),
+    this.formData = this.builder.group({
+      taskTitle: new FormControl ('', Validators.required),
       thumbnail: new FormControl (''),
       description: new FormControl (''),
       labels: new FormControl (''),
-      duedate: new FormControl (''),
+      duedate: new FormControl ('', FutureDateValidation),
       notes: new FormControl (''),
-      rating: new FormControl ('')
     })
   }
 

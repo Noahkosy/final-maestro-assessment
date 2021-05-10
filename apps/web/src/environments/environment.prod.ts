@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
   firebaseConfig: {
-    apiKey: "AIzaSyAk-NUsDR7c9etvhbSVfBkx8L6UUr6DANg",
-    authDomain: "maestro-demo-4200d.firebaseapp.com",
-    projectId: "maestro-demo-4200d",
-    storageBucket: "maestro-demo-4200d.appspot.com",
-    messagingSenderId: "707472089139",
-    appId: "1:707472089139:web:911ed65fda09c32007c346"
+    apiKey: "AIzaSyChG8vYV3zMfwmgnRmSptXXNS0zY31Bojk",
+    authDomain: "maestro-demo-ed009.firebaseapp.com",
+    projectId: "maestro-demo-ed009",
+    storageBucket: "maestro-demo-ed009.appspot.com",
+    messagingSenderId: "1027294287588",
+    appId: "1:1027294287588:web:ca8ca8dbeb1e4a8f0ebef1"
   }
 };
