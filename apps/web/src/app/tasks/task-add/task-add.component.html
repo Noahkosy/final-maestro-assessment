@@ -18,16 +18,24 @@
 </div> 
 
 <div>
-    <form [formGroup]='FormData' (ngSubmit)="onSubmit(FormData.value)">
+    <form [formGroup]='formData' (ngSubmit)="onSubmit(formData.value)">
 
         <form-field label='Task Name' for='name'>
             <input type="text" id="name" formControlName="taskTitle">
         </form-field>
+        <div
+            *ngIf="(
+                    formData.get('taskTitle').dirty ||
+                    formData.get('taskTitle').touched)
+                    && formData.get('taskTitle').invalid"
+        > 
+        Please provide a name for your task.
+        </div>
 
         <form-field label='Thumbnail' for='pic'>
             <input type="file" id='pic' formControlName="thumbnail">
         </form-field>
-
+        
         <form-field label='Tags' for='tags'>
             <input type="text" id='tags' formControlName="labels">
         </form-field>
@@ -39,12 +47,20 @@
         <form-field label='Due Date' for='date'>
             <input type="date" placeholder="MM/DD/YYYY" id="date" formControlName="duedate">
         </form-field>
+        <div
+            *ngIf="(
+                    formData.get('duedate').dirty ||
+                    formData.get('duedate').touched)
+                    && formData.get('duedate').invalid"
+        > 
+        Date provided is before current date.
+        </div>
 
         <form-field label='Notes' for='notes'>
             <input type="text" id="notes" formControlName="notes">
         </form-field>
 
-        <button type="submit" class="save-button m-1">Save</button>
+        <button type="submit" class="save-button m-1" disabled='!formData.valid'>Save</button>
 
     </form>
 </div>

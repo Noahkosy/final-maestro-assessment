@@ -12,8 +12,6 @@ export class TaskDashboardComponent implements OnInit {
 
   allTasks: any;
 
-  color: string;
-
    getAllProducts(): void { 
     this.firestore.getTasks()
     .subscribe(res => (this.allTasks = res));

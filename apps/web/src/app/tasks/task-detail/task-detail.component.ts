@@ -3,6 +3,7 @@ import { FirestoreService } from '../../core/services/firestore.service';
 import { ActivatedRoute } from '@angular/router';
 
 
+
 @Component({
   selector: 'nxlp-task-detail',
   templateUrl: './task-detail.component.html',
@@ -11,20 +12,19 @@ import { ActivatedRoute } from '@angular/router';
 export class TaskDetailComponent implements OnInit {
 
   constructor( private route: ActivatedRoute,
-               private fireservice: FirestoreService) { 
+               private firestore: FirestoreService) { 
   }
 
-  read:any;
+  task:any;
 
   getTask() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.fireservice.getDoc(id).subscribe(res => {
-      this.read = res;
-    })
+    this.firestore.getDoc(id);
+    console.log(this.task);
   }
 
   ngOnInit(): void {
-    this.getTask()
+    this.getTask();
   }
 
 }

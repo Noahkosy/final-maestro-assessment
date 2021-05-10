@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { observable, Observable } from 'rxjs';
 import { Task } from '../../shared/Interfaces/task-interface'
-
-
-
 
 @Injectable({
   providedIn: 'root'
@@ -25,9 +22,7 @@ export class FirestoreService {
   }
 
   getDoc(id:string) {
-    return new Observable<Task>(() => {
-      this.firestore.collection('tasks').doc(id).get();
-    })
+    return this.firestore.collection("tasks").doc(id).get();
   }
 
   updateTask(data) {
