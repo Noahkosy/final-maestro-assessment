@@ -10,16 +10,17 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./task-detail.component.scss']
 })
 export class TaskDetailComponent implements OnInit {
+  task:any;
 
   constructor( private route: ActivatedRoute,
                private firestore: FirestoreService) { 
+              this.task = this.route.snapshot.data.task; 
+              console.log(this.route.snapshot.data) 
   }
-
-  task:any;
 
   getTask() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.firestore.getDoc(id);
+    this.firestore.getDoc(id).subscribe(data => this.task = data);
     console.log(this.task);
   }
 
