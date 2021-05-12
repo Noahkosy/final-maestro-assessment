@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Task } from '../../shared/Interfaces/task-interface';
+import { Task } from '../../../shared/Interfaces/task-interface';
 
 @Component({
   selector: 'nxlp-task-detail',

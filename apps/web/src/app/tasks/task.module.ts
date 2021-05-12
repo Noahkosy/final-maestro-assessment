@@ -1,21 +1,18 @@
 import {  NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FireResolver } from '../core/services/fire.resolver.service';
+import { TaskResolver } from '../core/services/task-data.resolver.service';
 
-import { TaskAddComponent } from './task-add/task-add.component';
-import { TaskDetailComponent } from './task-detail/task-detail.component';
-
+import { TaskAddComponent } from './components/task-add/task-add.component';
+import { TaskDetailComponent } from './components/task-detail/task-detail.component';
 
 const routes:Routes = [
   { path: 'create', component: TaskAddComponent },
-  { path: ':id', component: TaskDetailComponent, resolve: { task: FireResolver}, data: { foo: "bar"}},
-  { path: ':id/edit', component: TaskAddComponent, resolve: { task: FireResolver}, data: { foo: "bar"}},
+  { path: ':id', component: TaskDetailComponent, resolve: { task: TaskResolver}, data: { foo: "bar"}},
+  { path: ':id/edit', component: TaskAddComponent, resolve: { task: TaskResolver}, data: { foo: "bar"}},
 ];
 
-
-
 @NgModule({
-  providers:[FireResolver],
+  providers:[TaskResolver],
   exports: [RouterModule],
   imports: [RouterModule.forChild(routes)]
 })

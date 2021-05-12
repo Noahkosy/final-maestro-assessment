@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { observable, Observable } from 'rxjs';
-import { Task } from '../../shared/Interfaces/task-interface'
 
 @Injectable({
   providedIn: 'root'
 })
-export class FirestoreService {
+export class TaskDataService {
 
   constructor( public firestore: AngularFirestore ) {}
 

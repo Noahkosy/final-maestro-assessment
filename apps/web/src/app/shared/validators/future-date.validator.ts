@@ -1,6 +1,6 @@
 import { AbstractControl } from "@angular/forms";
 
-export function FutureDateValidation (ctrl: AbstractControl) {
+export function futureDateValidation (ctrl: AbstractControl) {
     const str = ctrl.value;
     const now = parseInt(new Date().toISOString().slice(0,10).split('-').join(''));
     const date = parseInt(str.replaceAll("-", ''));

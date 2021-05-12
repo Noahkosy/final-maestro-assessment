@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FirestoreService } from '../../core/services/firestore.service'
+import { TaskDataService } from '../../../core/services/task-data.service'
 
 @Component({
   selector: 'nxlp-task-dashboard',
@@ -8,18 +8,16 @@ import { FirestoreService } from '../../core/services/firestore.service'
 })
 export class TaskDashboardComponent implements OnInit {
 
-  constructor( private firestore: FirestoreService) { }
-
   allTasks: any;
 
-   getAllProducts(): void { 
-    this.firestore.getTasks()
-    .subscribe(res => (this.allTasks = res));
-      console.log(this.allTasks)     
-  }
-
+  constructor( private taskdata: TaskDataService) { }
+ 
   ngOnInit(): void { 
     this.getAllProducts();
+  }
+
+  getAllProducts(): void { 
+    this.taskdata.getTasks().subscribe(res => (this.allTasks = res));     
   }
 
 }
