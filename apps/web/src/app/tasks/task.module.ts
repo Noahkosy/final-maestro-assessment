@@ -8,8 +8,8 @@ import { TaskDetailComponent } from './task-detail/task-detail.component';
 
 const routes:Routes = [
   { path: 'create', component: TaskAddComponent },
-  { path: ':id', component: TaskDetailComponent, resolve: { task: FireResolver}, data: { foo: "bar"}
-  }
+  { path: ':id', component: TaskDetailComponent, resolve: { task: FireResolver}, data: { foo: "bar"}},
+  { path: ':id/edit', component: TaskAddComponent, resolve: { task: FireResolver}, data: { foo: "bar"}},
 ];
 
 

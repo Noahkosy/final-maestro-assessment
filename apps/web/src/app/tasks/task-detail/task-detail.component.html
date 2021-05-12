@@ -11,7 +11,7 @@
     </div>
 
     <div class="align-items-end">
-        <button class="edit-button m-1"> Edit</button>
+        <button class="edit-button m-1" routerLink='edit'> Edit</button>
         <button class="complete-button m-1"> Mark as Complete</button>
     </div>
 </div>
@@ -21,7 +21,7 @@
         <task-detail
             description='{{task.description}}'
             labels='{{task.labels}}'
-            date='{{task.date}}'
+            date='{{task.duedate}}'
             notes='{{task.notes}}'
         ></task-detail>
     </div>
