@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { Task } from '../../shared/Interfaces/task-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -9,10 +10,7 @@ export class TaskDataService {
   constructor( public firestore: AngularFirestore ) {}
 
   createTask(data) {
-    return new Promise<any>((resolve, reject) => {
-      this.firestore.collection("tasks").add(data).then(res => {},
-        err => reject(err));
-    })
+    return this.firestore.collection("tasks").add(data);  
   }
 
   getTasks() {
@@ -23,12 +21,12 @@ export class TaskDataService {
     return this.firestore.collection("tasks").doc(id).get();
   }
 
-  updateTask(data) {
-    return this.firestore.collection("test").doc(data.payload.doc.id).set({ completed: true}, { merge: true})
+  updateTask(data: Task, id) {
+    return this.firestore.collection("tasks").doc(id).set(data)
   }
 
-  deleteTask(data) {
-    return this.firestore.collection("tasks").doc(data.payload.doc.id).delete()
+  deleteTask(id) {
+    return this.firestore.collection("tasks").doc(id).delete()
   }
 } 
 

@@ -12,22 +12,22 @@
 
     <div class="align-items-end">
         <button class="cancel-button m-1" routerLink="">Cancel</button>
-        <button class="delete-button m-1">Delete</button>
+        <button class="delete-button m-1" (click)="deleteTask()">Delete</button>
         
     </div>
 </div> 
 
 <div>
-    <form [formGroup]='formData' (ngSubmit)="onSubmit(formData.value)">
+    <form [formGroup]='form' (ngSubmit)="onSubmit(form.value)">
 
         <form-field label='Task Name' for='name'>
             <input type="text" id="name" formControlName="taskTitle">
         </form-field>
         <div
             *ngIf="(
-                    formData.get('taskTitle').dirty ||
-                    formData.get('taskTitle').touched)
-                    && formData.get('taskTitle').invalid"
+                    form.get('taskTitle').dirty ||
+                    form.get('taskTitle').touched)
+                    && form.get('taskTitle').invalid"
         > 
         Please provide a name for your task.
         </div>
@@ -49,9 +49,9 @@
         </form-field>
         <div
             *ngIf="(
-                    formData.get('duedate').dirty ||
-                    formData.get('duedate').touched)
-                    && formData.get('duedate').invalid"
+                    form.get('duedate').dirty ||
+                    form.get('duedate').touched)
+                    && form.get('duedate').invalid"
         > 
         Date provided is before current date.
         </div>

@@ -11,14 +11,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment';
 
 import { TaskDashboardComponent } from './tasks/components/task-dashboard/task-dashboard.component';
-import { TaskAddComponent } from './tasks/components/task-add/task-add.component';
+import { TaskFormComponent } from './tasks/components/task-form/task-form.component';
 import { TaskDetailComponent } from './tasks/components/task-detail/task-detail.component';
 
 import {  myDatePipe } from './shared/pipes/my-date.pipe';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [AppComponent, TaskDashboardComponent,TaskAddComponent,TaskDetailComponent, myDatePipe,],
+  declarations: [AppComponent, TaskDashboardComponent,TaskFormComponent,TaskDetailComponent, myDatePipe,],
   imports: [BrowserModule, AppRoutingModule, 
     AngularFirestoreModule, AngularFireDatabaseModule, 
     AngularFireModule.initializeApp(environment.firebaseConfig),
