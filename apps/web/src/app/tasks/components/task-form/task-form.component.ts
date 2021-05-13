@@ -48,12 +48,13 @@ export class TaskFormComponent implements OnInit {
   async onSubmit(data) {
     if (this.isEdit){
       await this.taskdata.updateTask(this.form.value, this.id);
-      alert('Your task had been updated!');
+      alert('Your task has been updated!');
       location.replace('tasks');
     } else {
       await this.taskdata.createTask(data);
       alert('Your task has been submitted!');
       this.form.reset();
+      location.replace('tasks')
     }
   }
 

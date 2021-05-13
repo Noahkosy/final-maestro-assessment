@@ -9,8 +9,8 @@ export class TaskResolver implements Resolve<any> {
 
     async resolve(snapshot: ActivatedRouteSnapshot) {
         const id = snapshot.paramMap.get('id');
-        const result = (await this.taskdata.getDoc(id).toPromise()).data();
-        return result;
+        const taskData = (await this.taskdata.getDoc(id).toPromise()).data();
+        return taskData;
         
     }
 }
