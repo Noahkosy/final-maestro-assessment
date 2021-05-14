@@ -6,7 +6,7 @@ import { TaskDashboardComponent } from './tasks/components/task-dashboard/task-d
 const routes:Routes = [ 
   { path: 'tasks', component: TaskDashboardComponent,},
   { path: 'tasks', loadChildren: () => import('./tasks/task.module').then(m => m.TaskModule) },
-  { path: '**', component: TaskDashboardComponent, },
+  { path: '**', redirectTo: 'tasks', },
 ]
 
 

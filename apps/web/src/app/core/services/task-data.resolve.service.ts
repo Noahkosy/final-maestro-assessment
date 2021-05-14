@@ -3,7 +3,7 @@ import { ActivatedRouteSnapshot, Resolve } from "@angular/router";
 import { TaskDataService } from "./task-data.service";
 
 @Injectable()
-export class TaskResolver implements Resolve<any> {
+export class TaskResolve implements Resolve<any> {
 
     constructor(private taskdata: TaskDataService) {}
 
