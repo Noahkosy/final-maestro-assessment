@@ -1,4 +1,4 @@
-<div class="navbar border-bottom p-3 mb-5">
+<div class="form-nav">
     <div class="to-done" routerLink=''>
         <p>
         <svg  version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32">
@@ -10,15 +10,15 @@
         <p>Add Task</p>
     </div>
 
-    <div class="align-items-end">
-        <button class="cancel-button m-1" routerLink="">Cancel</button>
-        <button class="delete-button m-1" (click)="deleteTask()">Delete</button>
-        
+    <div class="nav-buttons">
+        <button class="cancel-button" routerLink="">Cancel</button>
+        <button class="delete-button" (click)="deleteTask()">Delete</button>
+        <button type="submit" class="save-button" form="task-form">Save</button>
     </div>
 </div> 
 
 <div>
-    <form [formGroup]='form' (ngSubmit)="onSubmit(form.value)">
+    <form id="task-form" [formGroup]='form' (ngSubmit)="onSubmit(form.value)">
 
         <form-field label='Task Name' for='name'>
             <input type="text" id="name" formControlName="taskTitle">
@@ -59,9 +59,6 @@
         <form-field label='Notes' for='notes'>
             <input type="text" id="notes" formControlName="notes">
         </form-field>
-
-        <button type="submit" class="save-button m-1">Save</button>
-        <!--disabled='!formData.valid'-->
 
     </form>
 </div>

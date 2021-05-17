@@ -3,8 +3,35 @@
 @import '../../../libs/ui/fonts/font.css';
 @import './css/reset';
 
+:root {
+  // Background //
+  --app-bg-primary-color:#EAEDF3;
+  --app-bg-secondary-color:#FFFFFF;
+
+  // Buttons //
+  --app-button-primary-color:#34AA44;
+  --app-button-secondary-color:#FFFFFF;
+  --app-button-danger-color:#E73C1E;
+
+  // Button States //
+  --app-button-primary-hover:#31a13f;
+  --app-button-secondary-hover:#f2f2f2;
+  --app-button-danger-hover:#db381b;
+
+  // Text // 
+  --app-text-primary:#3E3F42;
+  --app-text-secondary:#9EA0A5;
+  --app-text-danger:#E73C1E;
+  --app-text-white:#FFFFFF; 
+
+  // Borders // 
+  --app-border-primary:#EAEDF3;
+  --app-border-secondary:#00000033;
+
+}
+
 body{
-  background-color: #FBFBFD;
+  background-color:var(--app-bg-primary-color);
 }
 
 button{

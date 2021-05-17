@@ -1,4 +1,3 @@
-
 <div class="navbar border-bottom p-3 mb-5">
     <div class="to-done">
         <p>
@@ -14,18 +13,16 @@
     </div>
 </div> 
 
-<div class="container ">
-    <div class="row flex justify-content-center">
-        <div class="col-lg-4 cards" routerLink='{{task.taskid}}'*ngFor='let task of allTasks' >
-            <task-card 
-                tags='{{task.labels}}'
-                taskTitle='{{task.taskTitle}}'
-                description='{{task.description}}'
-                date='{{task.duedate}}'>
-                <p>{{task.duedate | myDatePipe}}</p>
-            </task-card>
-        </div>
-    </div>
+<div class="container">  
+    <div class="col-lg-4 cards" routerLink="{{task.taskid}}"*ngFor="let task of allTasks" >
+        <task-card 
+            tags="{{task.labels}}"
+            taskTitle="{{task.taskTitle}}"
+            description="{{task.description}}"
+            date="{{task.duedate}}">
+            <p>{{task.duedate | myDatePipe}}</p>
+        </task-card>
+    </div>    
 </div>
 
 
