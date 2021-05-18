@@ -12,9 +12,10 @@ import { SharedModule } from './shared/shared.module';
 import { TaskDashboardComponent } from './tasks/components/task-dashboard/task-dashboard.component';
 import { TaskDetailComponent } from './tasks/components/task-detail/task-detail.component';
 import { TaskFormComponent } from './tasks/components/task-form/task-form.component';
+import { TaskNavComponent } from './tasks/components/task-nav/task-nav.component';
 
 @NgModule({
-  declarations: [AppComponent, TaskDashboardComponent,TaskFormComponent,TaskDetailComponent, myDatePipe,],
+  declarations: [AppComponent, TaskDashboardComponent,TaskFormComponent,TaskDetailComponent,TaskNavComponent, myDatePipe,],
   imports: [BrowserModule, AppRoutingModule, 
     AngularFirestoreModule, AngularFireDatabaseModule, 
     AngularFireModule.initializeApp(environment.firebaseConfig),

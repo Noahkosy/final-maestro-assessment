@@ -1,218 +1,103 @@
+/* Form */
+form { 
+  box-sizing: border-box;
+  width: 592px;
+  height: 740px;
 
-svg {
-    fill:#34AA44;
-    padding-right: 3px;
-  }
+  margin: 0px auto;
+  padding: 1em;
+  border: 2px solid var(--app-border-primary);
+  border-radius: 5px;
   
-  button svg {
-    fill:white;
-  }
+  background-color: var(--app-bg-secondary-color);
 
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
 
-  // LOGO
-  .to-done {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  .to-done:hover {
-    cursor: pointer;
-  }
-
-  .navbar {
-    background-color: white;
-  }
-
-  /* Buttons */
-
-  // SAVE BUTTON
-  .save-button{
-    justify-self: stretch;
-    display: inline-block;
-    border: none;
+  input, textarea {
+    display: block;
+    font: 16px 'Roboto', sans-serif;
+    width: 480px;
+    border: 2px solid var(--app-border-primary);
     border-radius: 5px;
-    padding: .5rem 1rem;
-    margin: 0;
-    text-decoration: none;
-    background: #34AA44;
-    color: #ffffff;
-    font-family: "Roboto";
-    font-size: .85rem;
-    cursor: pointer;
-    text-align: center;
-    transition: background 250ms ease-in-out, 
-                transform 150ms ease;
-    -webkit-appearance: none;
-    -moz-appearance: none;  
-    }
-
-    .save-button:hover,
-    .save-button:focus {
-        background: #31a13f;
-    }
-    
-    .save-button:focus {
-        outline: none;
-    }
-    
-    .save-button:active {
-        transform: scale(0.99);
-    }
-
-  
-  // CANCEL BUTTON
-  .cancel-button{
-    display: inline-block;
-    border: 2px solid #EAEDF3;
-    border-radius: 5px;
-    padding: .5rem 1rem;
-    margin: 0;
-    text-decoration: none;
-    background: #ffffff;
-    color: #000000;
-    font-family: "Roboto";
-    font-size: .85rem;
-    cursor: pointer;
-    text-align: center;
-    transition: background 250ms ease-in-out, 
-                transform 150ms ease;
-    -webkit-appearance: none;
-    -moz-appearance: none;  
-    }
-
-    .cancel-button:hover,
-    .cancel-button:focus {
-        background: #f2f2f2;
-    }
-    
-    .cancel-button:focus {
-        outline: none;
-    }
-    
-    .cancel-button:active {
-        transform: scale(0.99);
-    }
-
-
-  // DELETE BUTTON
-  .delete-button{
-    display: inline-block;
-    border: none;
-    border-radius: 5px;
-    padding: .5rem 1rem;
-    margin: 0;
-    text-decoration: none;
-    background: #E73C1E;
-    color: #ffffff;
-    font-family: "Roboto";
-    font-size: .85rem;
-    cursor: pointer;
-    text-align: center;
-    transition: background 250ms ease-in-out, 
-                transform 150ms ease;
-    -webkit-appearance: none;
-    -moz-appearance: none;     
+    padding: 8px;
   }
 
-    .delete-button:hover,
-    .delete-button:focus {
-        background: #db381b;
-    }
-    
-    .delete-button:focus {
-        outline: none;
-    }
-    
-    .delete-button:active {
-        transform: scale(0.99);
-    }
+}
 
-    // Form
-    form {
-      /* Center the form on the page */
-      position: relative;
-      margin: 0px auto;
-      width: 590px;
-      height: 740px;
-      padding: 1em;
-      border: 2px solid rgb(234, 237, 243);
-      border-radius: 5px;
-      box-sizing: border-box;
-      background-color: white;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      justify-items: center;
-    }
+/* Buttons */
+%button-shared {
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-size: .85rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out,
+              transform 150ms ease;
+}
+
+// SAVE BUTTON
+.save-button{
+  @extend %button-shared;
+  width: 70px;
+  height: 38px;
+  border: none;
+  margin-right: 14px;
+  background: var(--app-button-primary-color);
+  color:var(--app-bg-secondary-color  );
+}
+
+.save-button:hover,
+.save-button:focus {
+    background:var(--app-button-primary-hover) ;
+}
+
+// CANCEL BUTTON
+.cancel-button{
+  @extend %button-shared;
+  border: 1px solid var(--app-border-secondary);
+  width: 83px;
+  height: 38px;
+  padding: 0.5rem 1rem;
+  margin-right: 16px;
+  background: var(--app-button-secondary-color);
+  color: var(--app-text-primary);
+}
+
+.cancel-button:hover,
+.cancel-button:focus {
+    background:var(--app-button-secondary-hover) ;
+}
+
+// DELETE BUTTON
+.delete-button{
+  @extend %button-shared;
+  border: none;
+  height: 38px;
+  width: 80px;
+  padding: .5rem 1rem;
+  margin-right: 16px;
+  background:var(--app-button-danger-color);
+  color: var(--app-text-white);   
+}
+
+.delete-button:hover,
+.delete-button:focus {
+    background:var(--app-button-danger-hover) ;
+}
+
+
+
+
+
     
-    label {
-      font-family: 'Roboto';
-      font-size: 12px;
-      color: #9EA0A5;
-      margin-top: 30px;
-      margin-bottom: 7px;
-    }
+   
     
-    section {
-      width: 300px;
-      margin-left: 25px;
-    }
     
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
     
-    form li + li {
-      margin-top: 1em;
-    }
-    
-    input,label {
-      /* Uniform size & alignment */
-      display: block;
-      width: 90px;
-      
-    }
-    
-    input,
-    textarea {
-      /* To make sure that all text fields have the same font settings
-         By default, textareas have a monospace font */
-      font: 16px 'Roboto', sans-serif;
-    
-      /* Uniform text field size */
-      width: 480px;
-      
-    
-      /* Match form field borders */
-      border: 2px solid #EAEDF3;
-      border-radius: 5px;
-      padding: 8px;
-    
-    }
-    
-    input:focus,
-    textarea:focus {
-      /* Additional highlight for focused elements */
-      border-color: #1665D8;
-    }
-    
-    textarea {
-      /* Align multiline text fields with their labels */
-      vertical-align: top;
-    
-      /* Provide space to type some text */
-      height: 5em;
-      resize: none;
-    }
-    
-    .dashes{
-      border: 2px dashed #EAEDF3;
-    }
-    
-    .sm-box{
-      width: 200px;
-    }
     
     
