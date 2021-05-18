@@ -1,93 +1,51 @@
+.container {
+  display: grid;
+  justify-content: center;
+}
 
-svg {
-    fill:#34AA44;
-    padding-right: 3px;
-  }
+/* Buttons */
+%button-shared {
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-size: .85rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out,
+              transform 150ms ease;
+}
   
-  button svg {
-    fill:white;
-  }
+// Mark as Complete
+.complete-button {
+  @extend %button-shared;
+  border: none;
+  padding: .5rem 1rem;
+  margin-right: 14px; 
+  background: var(--app-button-primary-color);
+  color: var(--app-text-white);
+}
+  
+.complete-button:hover,
+.complete-button:focus {
+  background: var(--app-button-primary-hover);
+}
 
-  .navbar {
-    background-color: white;
-  }
+// Edit Button
+.edit-button {
+  @extend %button-shared;
+  border: 1px solid #EAEDF3;
+  padding: .5rem 1rem;
+  margin-right: 16px;
+  background: var(--app-bg-secondary-color);
+  color: #000000;
+} 
   
-  // Mark as Complete
-  .complete-button {
-    display: inline-block;
-    border: none;
-    border-radius: 5px;
-    padding: .5rem 1rem;
-    margin-right: 14px;
-    text-decoration: none;
-    background: #34AA44;
-    color: #ffffff;
-    font-family: "Roboto";
-    font-size: .85rem;
-    cursor: pointer;
-    text-align: center;
-    transition: background 250ms ease-in-out, 
-                transform 150ms ease;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
+.edit-button:hover,
+.edit-button:focus {
+  background: #f2f2f2;
+}
   
-  .complete-button:hover,
-  .complete-button:focus {
-    background: #31a13f;
-  }
-  
-  .complete-button:focus {
-    outline: none;
-  }
-  
-  .complete-button:active {
-    transform: scale(0.99);
-  }
 
-
-  // Edit Button
-  .edit-button {
-    display: inline-block;
-    border: 2px solid #EAEDF3;
-    border-radius: 5px;
-    padding: .5rem 1rem;
-    margin-right: 16px;
-    text-decoration: none;
-    background: #ffffff;
-    color: #000000;
-    font-family: "Roboto";
-    font-size: .85rem;
-    cursor: pointer;
-    text-align: center;
-    transition: background 250ms ease-in-out, 
-                transform 150ms ease;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
-  
-  .edit-button:hover,
-  .edit-button:focus {
-    background: #f2f2f2;
-  }
-  
-  .edit-button:focus {
-    outline: none;
-  }
-  
-  .edit-button:active {
-    transform: scale(0.99);
-  }
-
-
-  // LOGO
-  .to-done {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  .to-done:hover{
-    cursor: pointer;
-  }
   
   

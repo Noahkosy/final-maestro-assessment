@@ -2,47 +2,39 @@
     <p>Add Task</p>
     <button class="cancel-button" routerLink="">Cancel</button>
     <button class="delete-button" >Delete</button>
-    <button type="submit" class="save-button" form="task-form">Save</button>
+    <button type="submit" class="save-button" form="task-form">Save</button>   
 </nxlp-task-nav>
 
 <main>
-    <form id="task-form" [formGroup]='form' (ngSubmit)="onSubmit(form.value)">
+    <form id="task-form" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
 
-        <form-field label='Task Name' for='name'>
+        <form-field label="Task Name" for="name">
             <input type="text" id="name" formControlName="taskTitle">
         </form-field>
-        <div
-            *ngIf="(
-                    form.get('taskTitle').dirty ||
-                    form.get('taskTitle').touched)
-                    && form.get('taskTitle').invalid"
-        > 
-        Please provide a name for your task.
-        </div>
 
-        <form-field label='Thumbnail' for='pic'>
-            <input type="file" id='pic' formControlName="thumbnail">
+        <span *ngIf="">
+            <small>Please provide a name for your task.</small>
+        </span>
+
+        <form-field label="Thumbnail" for="pic">
+            <input type="file" id="pic" formControlName="thumbnail">
         </form-field>
         
-        <form-field label='Tags' for='tags'>
-            <input type="text" id='tags' formControlName="labels">
+        <form-field label="Tags" for="tags">
+            <input type="text" id="tags" formControlName="labels">
         </form-field>
 
-        <form-field label='Description' for='description'>
+        <form-field label="Description" for="description">
             <textarea type="text" id="description" formControlName="description"></textarea>
         </form-field>
 
-        <form-field label='Due Date' for='date'>
+        <form-field label="Due Date" for="date">
             <input type="date" placeholder="MM/DD/YYYY" id="date" formControlName="duedate">
         </form-field>
-        <div
-            *ngIf="(
-                    form.get('duedate').dirty ||
-                    form.get('duedate').touched)
-                    && form.get('duedate').invalid"
-        > 
-        Date provided is before current date.
-        </div>
+
+        <span *ngIf=""> 
+            <small>Date provided is before current date.</small>
+        </span>
 
         <form-field label='Notes' for='notes'>
             <textarea type="text" id="notes" formControlName="notes"></textarea>

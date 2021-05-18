@@ -1,16 +1,14 @@
 <nxlp-task-nav>
     <p>{{task.taskTitle}}</p>
-    <button class="edit-button" routerLink='edit'> Edit</button>
+    <button class="edit-button" routerLink="edit"> Edit</button>
     <button class="complete-button"> Mark as Complete</button>
 </nxlp-task-nav>
 
-<div class="container d-flex justify-content-center">
-    <div>
-        <task-detail
-            description='{{task.description}}'
-            labels='{{task.labels}}'
-            date='{{task.duedate}}'
-            notes='{{task.notes}}'
-        ></task-detail>
-    </div>
-</div>
+<main class="container">
+    <task-detail
+        description="{{task.description}}"
+        labels="{{task.labels}}"
+        date="{{task.duedate}}"
+        notes="{{task.notes}}"
+    ></task-detail> 
+</main>
