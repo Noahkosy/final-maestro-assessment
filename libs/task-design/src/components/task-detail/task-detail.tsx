@@ -45,7 +45,7 @@ export class TaskDetail {
         </div>
       
         <div class='read-date'>
-          <p>{this.date}</p>
+          <slot/>
         </div>
 
         <p class='notes'>NOTES</p>
