@@ -1,4 +1,4 @@
-import { Component, h, Host, Prop } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'task-card',
@@ -18,8 +18,7 @@ export class TaskCard {
 
   render() {
     return (
-      <Host>
-
+    
       <div class="card">
 
         <div class="card-img">
@@ -49,7 +48,7 @@ export class TaskCard {
         </div>
         
       </div>
-      </Host>
+      
     );
   }
 }

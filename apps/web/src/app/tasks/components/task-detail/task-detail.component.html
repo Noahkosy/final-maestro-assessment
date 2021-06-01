@@ -8,7 +8,7 @@
     <task-detail
         description="{{task.description}}"
         labels="{{task.labels}}"
-        date="{{task.duedate}}"
-        notes="{{task.notes}}"
-    ></task-detail> 
+        notes="{{task.notes}}">
+        <p>{{task.duedate | myDatePipe}}</p>
+    </task-detail> 
 </main>

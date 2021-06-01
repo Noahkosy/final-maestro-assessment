@@ -13,8 +13,6 @@
 svg {
   fill:var(--app-button-primary-color);
   margin-right: 10px;
-  position: relative;
-  bottom: 1px;
 }
 
 button svg {
@@ -28,6 +26,8 @@ button {
   margin-right: 14px;
   background: var(--app-button-primary-color);
   color: var(--app-text-white);
+  display: flex;
+  align-items: center;
 }
 
 button:hover,
@@ -41,8 +41,7 @@ button:focus {
   gap: 30px;
   justify-items: center;
 
-  .cards, 
-  .cards:hover {
+  .cards {
     box-sizing: border-box;
     width: 350px;
     cursor: pointer;
