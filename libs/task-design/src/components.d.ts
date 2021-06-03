@@ -8,6 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface FormField {
         "for": string;
+        "isInvalid": boolean;
         "label": string;
     }
     interface TaskCard {
@@ -63,6 +64,7 @@ declare global {
 declare namespace LocalJSX {
     interface FormField {
         "for"?: string;
+        "isInvalid"?: boolean;
         "label"?: string;
     }
     interface TaskCard {

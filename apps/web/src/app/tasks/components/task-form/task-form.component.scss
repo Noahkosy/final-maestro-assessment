@@ -1,3 +1,5 @@
+@import 'apps/web/src/app/shared/styles/buttons.scss';
+
 /* Form */
 form { 
   box-sizing: border-box;
@@ -25,19 +27,6 @@ form {
     padding: 8px;
   }
 
-}
-
-/* Buttons */
-%button-shared {
-  box-sizing: border-box;
-  border-radius: 4px;
-  text-decoration: none;
-  font-family: "Roboto";
-  font-size: .85rem;
-  cursor: pointer;
-  text-align: center;
-  transition: background 250ms ease-in-out,
-              transform 150ms ease;
 }
 
 // SAVE BUTTON

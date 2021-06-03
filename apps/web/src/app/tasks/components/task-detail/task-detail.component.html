@@ -9,6 +9,6 @@
         description="{{task.description}}"
         labels="{{task.labels}}"
         notes="{{task.notes}}">
-        <p>{{task.duedate | myDatePipe}}</p>
+        <p slot="date-placement">{{task.dueDate | myDatePipe}}</p>
     </task-detail> 
 </main>
