@@ -8,11 +8,11 @@
 <main>
     <form id="task-form" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
 
-        <form-field label="Task Name" for="name">
+        <form-field label="Task Name" for="name" isValid="isInvalid('taskTitle')">
             <input type="text" id="name" formControlName="taskTitle">
         </form-field>
 
-        <span *ngIf="">
+        <span *ngIf="isInvalid('taskTitle')">
             <small>Please provide a name for your task.</small>
         </span>
 
@@ -29,10 +29,10 @@
         </form-field>
 
         <form-field label="Due Date" for="date">
-            <input type="date" placeholder="MM/DD/YYYY" id="date" formControlName="duedate">
+            <input type="date" placeholder="MM/DD/YYYY" id="date" formControlName="dueDate">
         </form-field>
 
-        <span *ngIf=""> 
+        <span *ngIf="isInvalid('dueDate')"> 
             <small>Date provided is before current date.</small>
         </span>
 

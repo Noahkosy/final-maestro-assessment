@@ -36,7 +36,7 @@ export class TaskFormComponent implements OnInit {
       thumbnail: [''],
       description: [''],
       labels: [''],
-      duedate: ['', futureDateValidation],
+      dueDate: ['', futureDateValidation],
       notes: [''],
     })
 
@@ -61,5 +61,11 @@ export class TaskFormComponent implements OnInit {
   deleteTask() {
     this.taskdata.deleteTask(this.id);
     location.replace('tasks');
+  }
+
+  isInvalid(control) {
+    if ((this.form.get(control).dirty || this.form.get(control).touched) && this.form.get(control).invalid) {
+      return true;
+    }
   }
 }

@@ -45,7 +45,7 @@ export class TaskDetail {
         </div>
       
         <div class='read-date'>
-          <slot/>
+          <slot name='date-placement' />
         </div>
 
         <p class='notes'>NOTES</p>
