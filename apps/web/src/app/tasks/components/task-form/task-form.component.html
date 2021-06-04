@@ -1,20 +1,16 @@
 <nxlp-task-nav>
     <p>Add Task</p>
     <button class="cancel-button" routerLink="">Cancel</button>
-    <button class="delete-button" >Delete</button>
+    <button class="delete-button" (click)="deleteTask()">Delete</button>
     <button type="submit" class="save-button" form="task-form">Save</button>   
 </nxlp-task-nav>
 
 <main>
     <form id="task-form" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
 
-        <form-field label="Task Name" for="name" isValid="isInvalid('taskTitle')">
+        <form-field label="Task Name*" for="name" error-message="Please provide a name for your task." [showError]="isInvalid('taskTitle')">
             <input type="text" id="name" formControlName="taskTitle">
         </form-field>
-
-        <span *ngIf="isInvalid('taskTitle')">
-            <small>Please provide a name for your task.</small>
-        </span>
 
         <form-field label="Thumbnail" for="pic">
             <input type="file" id="pic" formControlName="thumbnail">
@@ -28,13 +24,9 @@
             <textarea type="text" id="description" formControlName="description"></textarea>
         </form-field>
 
-        <form-field label="Due Date" for="date">
+        <form-field label="Due Date" for="date" error-message="Date provided is before current date." [showError]="isInvalid('dueDate')">
             <input type="date" placeholder="MM/DD/YYYY" id="date" formControlName="dueDate">
         </form-field>
-
-        <span *ngIf="isInvalid('dueDate')"> 
-            <small>Date provided is before current date.</small>
-        </span>
 
         <form-field label='Notes' for='notes'>
             <textarea type="text" id="notes" formControlName="notes"></textarea>

@@ -7,11 +7,12 @@
 
 ## Properties
 
-| Property    | Attribute    | Description | Type      | Default     |
-| ----------- | ------------ | ----------- | --------- | ----------- |
-| `for`       | `for`        |             | `string`  | `undefined` |
-| `isInvalid` | `is-invalid` |             | `boolean` | `undefined` |
-| `label`     | `label`      |             | `string`  | `undefined` |
+| Property       | Attribute       | Description | Type      | Default     |
+| -------------- | --------------- | ----------- | --------- | ----------- |
+| `errorMessage` | `error-message` |             | `string`  | `undefined` |
+| `for`          | `for`           |             | `string`  | `undefined` |
+| `label`        | `label`         |             | `string`  | `undefined` |
+| `showError`    | `show-error`    |             | `boolean` | `undefined` |
 
 
 ----------------------------------------------

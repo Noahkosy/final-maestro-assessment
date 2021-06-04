@@ -46,15 +46,16 @@ export class TaskFormComponent implements OnInit {
   }
 
   async onSubmit(data) {
-    if (this.isEdit){
+    const title = this.form.get('taskTitle');
+    title.markAsTouched({ onlySelf: true});
+    if(!this.form.valid){
+      return false;
+    } else if (this.isEdit){
       await this.taskdata.updateTask(this.form.value, this.id);
-      alert('Your task has been updated!');
-      location.replace('tasks');
+      location.replace('{{task.id}}');
     } else {
       await this.taskdata.createTask(data);
-      alert('Your task has been submitted!');
-      this.form.reset();
-      location.replace('tasks')
+      location.replace('{{task.id}}')
     }
   }
 

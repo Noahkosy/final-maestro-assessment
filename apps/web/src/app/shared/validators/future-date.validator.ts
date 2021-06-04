@@ -4,9 +4,11 @@ export function futureDateValidation (ctrl: AbstractControl) {
     const str = ctrl.value;
     const now = parseInt(new Date().toISOString().slice(0,10).split('-').join(''));
     const date = parseInt(str.replaceAll("-", ''));
-    if (date < now) {
+    if (!str) {
+        return false;
+    } else if (date < now) {
         return { invalidDate: true };
     } else {
-        return null;
+        return;
     }
 }
