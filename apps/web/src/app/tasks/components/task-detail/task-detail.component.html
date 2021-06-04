@@ -6,9 +6,9 @@
 
 <main class="container">
     <task-detail
-        description="{{task.description}}"
-        labels="{{task.labels}}"
-        notes="{{task.notes}}">
+        [description]="task.description"
+        [labels]="task.labels"
+        [notes]="task.notes">
         <p slot="date-placement">{{task.dueDate | myDatePipe}}</p>
     </task-detail> 
 </main>

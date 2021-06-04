@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from '../app-routing.module';
-import { TaskResolve } from '../core/services/task-data.resolve.service';
+import { TaskResolve } from '../core/services/task-data.resolve';
 import { FormActionEnum } from '../shared/Interfaces/form-action.enum';
 import { TaskDetailComponent } from './components/task-detail/task-detail.component';
 import { TaskFormComponent } from './components/task-form/task-form.component';
