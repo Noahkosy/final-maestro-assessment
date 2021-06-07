@@ -2,39 +2,43 @@
     <p>Add Task</p>
     <button class="cancel-button" routerLink="">Cancel</button>
     <button class="delete-button" (click)="deleteTask()">Delete</button>
-    <button type="submit" class="save-button" form="task-form">Save</button>   
+    <button type="submit" class="save-button" form="task-form">Save</button>
 </nxlp-task-nav>
 
 <main>
     <form id="task-form" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
-
-        <form-field label="Task Name*" for="name" error-message="Please provide a name for your task." [showError]="isInvalid('taskTitle')">
-            <input type="text" id="name" formControlName="taskTitle">
+        <form-field
+            label="Task Name*"
+            for="name"
+            error-message="Please provide a name for your task."
+            [showError]="isInvalid('taskTitle')"
+        >
+            <input type="text" id="name" formControlName="taskTitle" />
         </form-field>
 
         <form-field label="Thumbnail" for="pic">
-            <input type="file" id="pic" formControlName="thumbnail">
+            <input type="file" id="pic" formControlName="thumbnail" />
         </form-field>
-        
+
         <form-field label="Tags" for="tags">
-            <input type="text" id="tags" formControlName="labels">
+            <input type="text" id="tags" formControlName="labels" />
         </form-field>
 
         <form-field label="Description" for="description">
             <textarea type="text" id="description" formControlName="description"></textarea>
         </form-field>
 
-        <form-field label="Due Date" for="date" error-message="Date provided is before current date." [showError]="isInvalid('dueDate')">
-            <input type="date" placeholder="MM/DD/YYYY" id="date" formControlName="dueDate">
+        <form-field
+            label="Due Date"
+            for="date"
+            error-message="Date provided is before current date."
+            [showError]="isInvalid('dueDate')"
+        >
+            <input type="date" placeholder="MM/DD/YYYY" id="date" formControlName="dueDate" />
         </form-field>
 
-        <form-field label='Notes' for='notes'>
+        <form-field label="Notes" for="notes">
             <textarea type="text" id="notes" formControlName="notes"></textarea>
         </form-field>
-
     </form>
 </main>
-
-
-
-

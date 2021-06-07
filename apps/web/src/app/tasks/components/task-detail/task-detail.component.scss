@@ -1,40 +1,36 @@
 @import '../../../shared/styles/buttons.scss';
 
 .container {
-  display: grid;
-  justify-content: center;
+    display: grid;
+    justify-content: center;
 }
-  
+
 // Mark as Complete
 .complete-button {
-  @extend %button-shared;
-  border: none;
-  padding: .5rem 1rem;
-  margin-right: 14px; 
-  background: var(--app-button-primary-color);
-  color: var(--app-text-white);
+    @extend %button-shared;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 14px;
+    background: var(--app-button-primary-color);
+    color: var(--app-text-white);
 }
-  
+
 .complete-button:hover,
 .complete-button:focus {
-  background: var(--app-button-primary-hover);
+    background: var(--app-button-primary-hover);
 }
 
 // Edit Button
 .edit-button {
-  @extend %button-shared;
-  border: 1px solid #EAEDF3;
-  padding: .5rem 1rem;
-  margin-right: 16px;
-  background: var(--app-bg-secondary-color);
-  color: #000000;
-} 
-  
+    @extend %button-shared;
+    border: 1px solid #eaedf3;
+    padding: 0.5rem 1rem;
+    margin-right: 16px;
+    background: var(--app-bg-secondary-color);
+    color: #000000;
+}
+
 .edit-button:hover,
 .edit-button:focus {
-  background: #f2f2f2;
+    background: #f2f2f2;
 }
-  
-
-  
-  

@@ -1,44 +1,39 @@
 @import '../../../shared/styles/buttons.scss';
 
 svg {
-  fill:var(--app-button-primary-color);
-  margin-right: 10px;
+    fill: var(--app-button-primary-color);
+    margin-right: 10px;
 }
 
 button svg {
-  fill:#FFFFFF;
+    fill: #ffffff;
 }
 
 button {
-  @extend %button-shared;
-  border: none;
-  padding: .5rem 1rem;
-  margin-right: 14px;
-  background: var(--app-button-primary-color);
-  color: var(--app-text-white);
-  display: flex;
-  align-items: center;
+    @extend %button-shared;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 14px;
+    background: var(--app-button-primary-color);
+    color: var(--app-text-white);
+    display: flex;
+    align-items: center;
 }
 
 button:hover,
 button:focus {
-  background: var(--app-button-primary-hover);
+    background: var(--app-button-primary-hover);
 }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
-  justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    justify-items: center;
 
-  .cards {
-    box-sizing: border-box;
-    width: 350px;
-    cursor: pointer;
-  }
-
+    .cards {
+        box-sizing: border-box;
+        width: 350px;
+        cursor: pointer;
+    }
 }
-
-  
-  
-  

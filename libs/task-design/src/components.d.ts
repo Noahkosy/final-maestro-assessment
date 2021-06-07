@@ -12,11 +12,14 @@ export namespace Components {
         "label": string;
         "showError": boolean;
     }
+    interface LabelValue {
+        "labels": string;
+    }
     interface TaskCard {
         "date": string;
         "description": string;
         "img": string;
-        "tags": string;
+        "labels": string;
         "taskTitle": string;
     }
     interface TaskDetail {
@@ -34,6 +37,12 @@ declare global {
         prototype: HTMLFormFieldElement;
         new (): HTMLFormFieldElement;
     };
+    interface HTMLLabelValueElement extends Components.LabelValue, HTMLStencilElement {
+    }
+    var HTMLLabelValueElement: {
+        prototype: HTMLLabelValueElement;
+        new (): HTMLLabelValueElement;
+    };
     interface HTMLTaskCardElement extends Components.TaskCard, HTMLStencilElement {
     }
     var HTMLTaskCardElement: {
@@ -48,6 +57,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "form-field": HTMLFormFieldElement;
+        "label-value": HTMLLabelValueElement;
         "task-card": HTMLTaskCardElement;
         "task-detail": HTMLTaskDetailElement;
     }
@@ -59,11 +69,14 @@ declare namespace LocalJSX {
         "label"?: string;
         "showError"?: boolean;
     }
+    interface LabelValue {
+        "labels"?: string;
+    }
     interface TaskCard {
         "date"?: string;
         "description"?: string;
         "img"?: string;
-        "tags"?: string;
+        "labels"?: string;
         "taskTitle"?: string;
     }
     interface TaskDetail {
@@ -75,6 +88,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "form-field": FormField;
+        "label-value": LabelValue;
         "task-card": TaskCard;
         "task-detail": TaskDetail;
     }
@@ -84,6 +98,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "form-field": LocalJSX.FormField & JSXBase.HTMLAttributes<HTMLFormFieldElement>;
+            "label-value": LocalJSX.LabelValue & JSXBase.HTMLAttributes<HTMLLabelValueElement>;
             "task-card": LocalJSX.TaskCard & JSXBase.HTMLAttributes<HTMLTaskCardElement>;
             "task-detail": LocalJSX.TaskDetail & JSXBase.HTMLAttributes<HTMLTaskDetailElement>;
         }
