@@ -65,8 +65,4 @@ export class TaskFormComponent implements OnInit {
             return true;
         }
     }
-
-    labelArray(str) {
-        return str.split(' ');
-    }
 }

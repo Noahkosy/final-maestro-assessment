@@ -6,7 +6,7 @@ import { Component, h, Host, Prop } from '@stencil/core';
 })
 export class TaskCard {
     @Prop() img: string;
-    @Prop() tags: string;
+    @Prop() labels: string;
     @Prop() taskTitle: string;
     @Prop() description: string;
     @Prop() date: string;
@@ -20,9 +20,7 @@ export class TaskCard {
                         {this.img}
                     </div>
 
-                    <div class='card-labels'>
-                        <p>{this.tags}</p>
-                    </div>
+                    <label-value labels={this.labels}></label-value>
 
                     <div class='card-title'>
                         <p>{this.taskTitle}</p>
