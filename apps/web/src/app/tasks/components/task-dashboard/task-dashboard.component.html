@@ -6,7 +6,7 @@
 
 <main class="container">  
     <div class="cards" routerLink="{{task.taskid}}"*ngFor="let task of allTasks" >
-        <task-card 
+        <task-card
             [tags]="task.labels"
             [taskTitle]="task.taskTitle"
             [description]="task.description"

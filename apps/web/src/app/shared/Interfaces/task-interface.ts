@@ -4,5 +4,6 @@ export interface Task {
     labels: string,
     dueDate: string, 
     description: string,
-    notes: string
+    notes: string,
+    completed: boolean,
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { TaskDataService } from '../../../core/services/task-data.service';
 import { Task } from '../../../shared/Interfaces/task-interface';
 
 @Component({
@@ -9,13 +10,26 @@ import { Task } from '../../../shared/Interfaces/task-interface';
 })
 export class TaskDetailComponent implements OnInit {
 
-  task:Task;
+  task: Task;
 
-  constructor( private route: ActivatedRoute,) {}
+  id: string;
+
+  constructor( 
+    private route: ActivatedRoute,
+    private taskdata: TaskDataService,
+    private activatedRoute: ActivatedRoute,
+    ) {}
 
   ngOnInit(): void {
     this.task = this.route.snapshot.data.task;
+    
+    this.id = this.activatedRoute.snapshot.paramMap.get('id')
+
     console.log(this.task)
   }
+
+  // async markCompleted(){
+  //   await this.taskdata.updateTask(this.task.description, this.id)
+  // }
 
 }

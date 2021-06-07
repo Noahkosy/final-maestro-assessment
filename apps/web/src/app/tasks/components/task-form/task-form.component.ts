@@ -38,6 +38,7 @@ export class TaskFormComponent implements OnInit {
       labels: [''],
       dueDate: ['', futureDateValidation],
       notes: [''],
+      completed: [false],
     })
 
     if(this.isEdit){

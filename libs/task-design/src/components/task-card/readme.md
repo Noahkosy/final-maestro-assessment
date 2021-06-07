@@ -7,13 +7,14 @@
 
 ## Properties
 
-| Property      | Attribute     | Description | Type     | Default     |
-| ------------- | ------------- | ----------- | -------- | ----------- |
-| `date`        | `date`        |             | `string` | `undefined` |
-| `description` | `description` |             | `string` | `undefined` |
-| `img`         | `img`         |             | `string` | `undefined` |
-| `tags`        | `tags`        |             | `string` | `undefined` |
-| `taskTitle`   | `task-title`  |             | `string` | `undefined` |
+| Property      | Attribute      | Description | Type      | Default     |
+| ------------- | -------------- | ----------- | --------- | ----------- |
+| `date`        | `date`         |             | `string`  | `undefined` |
+| `description` | `description`  |             | `string`  | `undefined` |
+| `displayNone` | `display-none` |             | `boolean` | `undefined` |
+| `img`         | `img`          |             | `string`  | `undefined` |
+| `tags`        | `tags`         |             | `string`  | `undefined` |
+| `taskTitle`   | `task-title`   |             | `string`  | `undefined` |
 
 
 ----------------------------------------------
