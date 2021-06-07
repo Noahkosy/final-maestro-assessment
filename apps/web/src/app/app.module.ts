@@ -15,13 +15,25 @@ import { TaskFormComponent } from './tasks/components/task-form/task-form.compon
 import { TaskNavComponent } from './tasks/components/task-nav/task-nav.component';
 
 @NgModule({
-  declarations: [AppComponent, TaskDashboardComponent,TaskFormComponent,TaskDetailComponent,TaskNavComponent, myDatePipe,],
-  imports: [BrowserModule, AppRoutingModule, 
-    AngularFirestoreModule, AngularFireDatabaseModule, 
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    ReactiveFormsModule, SharedModule],
-  providers:[],
-  bootstrap:[AppComponent],
-  schemas:[ CUSTOM_ELEMENTS_SCHEMA ],
+    declarations: [
+        AppComponent,
+        TaskDashboardComponent,
+        TaskFormComponent,
+        TaskDetailComponent,
+        TaskNavComponent,
+        myDatePipe,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        AngularFirestoreModule,
+        AngularFireDatabaseModule,
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        ReactiveFormsModule,
+        SharedModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}

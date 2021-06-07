@@ -1,11 +1,10 @@
-import { NgModule } from "@angular/core";
-
+import { NgModule } from '@angular/core';
 
 @NgModule({
-    declarations:[],
+    declarations: [],
     exports: [],
     imports: [],
     providers: [],
-    bootstrap: []    
+    bootstrap: [],
 })
 export class SharedModule {}

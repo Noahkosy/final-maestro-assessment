@@ -1,92 +1,80 @@
 @import '../../../shared/styles/buttons.scss';
 
 /* Form */
-form { 
-  box-sizing: border-box;
-  width: 592px;
-  height: 740px;
+form {
+    box-sizing: border-box;
+    width: 592px;
+    height: 740px;
 
-  margin: 0px auto;
-  padding: 1em;
-  border: 2px solid var(--app-border-primary);
-  border-radius: 5px;
-  
-  background-color: var(--app-bg-secondary-color);
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  justify-items: center;
-
-  input, textarea {
-    display: block;
-    font: 16px 'Roboto', sans-serif;
-    width: 480px;
+    margin: 0px auto;
+    padding: 1em;
     border: 2px solid var(--app-border-primary);
     border-radius: 5px;
-    padding: 8px;
-  }
 
+    background-color: var(--app-bg-secondary-color);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+
+    input,
+    textarea {
+        display: block;
+        font: 16px 'Roboto', sans-serif;
+        width: 480px;
+        border: 2px solid var(--app-border-primary);
+        border-radius: 5px;
+        padding: 8px;
+    }
 }
 
 // SAVE BUTTON
-.save-button{
-  @extend %button-shared;
-  width: 70px;
-  height: 38px;
-  border: none;
-  margin-right: 14px;
-  background: var(--app-button-primary-color);
-  color:var(--app-bg-secondary-color  );
+.save-button {
+    @extend %button-shared;
+    width: 70px;
+    height: 38px;
+    border: none;
+    margin-right: 14px;
+    background: var(--app-button-primary-color);
+    color: var(--app-bg-secondary-color);
 }
 
 .save-button:hover,
 .save-button:focus {
-    background:var(--app-button-primary-hover) ;
+    background: var(--app-button-primary-hover);
 }
 
 // CANCEL BUTTON
-.cancel-button{
-  @extend %button-shared;
-  border: 1px solid var(--app-border-secondary);
-  width: 83px;
-  height: 38px;
-  padding: 0.5rem 1rem;
-  margin-right: 16px;
-  background: var(--app-button-secondary-color);
-  color: var(--app-text-primary);
+.cancel-button {
+    @extend %button-shared;
+    border: 1px solid var(--app-border-secondary);
+    width: 83px;
+    height: 38px;
+    padding: 0.5rem 1rem;
+    margin-right: 16px;
+    background: var(--app-button-secondary-color);
+    color: var(--app-text-primary);
 }
 
 .cancel-button:hover,
 .cancel-button:focus {
-    background:var(--app-button-secondary-hover) ;
+    background: var(--app-button-secondary-hover);
 }
 
 // DELETE BUTTON
-.delete-button{
-  @extend %button-shared;
-  border: none;
-  height: 38px;
-  width: 80px;
-  padding: .5rem 1rem;
-  margin-right: 16px;
-  background:var(--app-button-danger-color);
-  color: var(--app-text-white);   
+.delete-button {
+    @extend %button-shared;
+    border: none;
+    height: 38px;
+    width: 80px;
+    padding: 0.5rem 1rem;
+    margin-right: 16px;
+    background: var(--app-button-danger-color);
+    color: var(--app-text-white);
 }
 
 .delete-button:hover,
 .delete-button:focus {
-    background:var(--app-button-danger-hover) ;
+    background: var(--app-button-danger-hover);
 }
-
-
-
-
-
-    
-   
-    
-    
-    
-    
-    

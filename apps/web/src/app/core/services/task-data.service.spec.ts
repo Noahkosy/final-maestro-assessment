@@ -3,14 +3,14 @@ import { TestBed } from '@angular/core/testing';
 import { TaskDataService } from './task-data.service';
 
 describe('FirestoreService', () => {
-  let service: TaskDataService;
+    let service: TaskDataService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(TaskDataService);
-  });
+    beforeEach(() => {
+        TestBed.configureTestingModule({});
+        service = TestBed.inject(TaskDataService);
+    });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+    it('should be created', () => {
+        expect(service).toBeTruthy();
+    });
 });
