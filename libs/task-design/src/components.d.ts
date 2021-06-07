@@ -15,7 +15,6 @@ export namespace Components {
     interface TaskCard {
         "date": string;
         "description": string;
-        "displayNone": boolean;
         "img": string;
         "tags": string;
         "taskTitle": string;
@@ -63,7 +62,6 @@ declare namespace LocalJSX {
     interface TaskCard {
         "date"?: string;
         "description"?: string;
-        "displayNone"?: boolean;
         "img"?: string;
         "tags"?: string;
         "taskTitle"?: string;

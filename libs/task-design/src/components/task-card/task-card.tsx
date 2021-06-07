@@ -10,7 +10,6 @@ export class TaskCard {
     @Prop() taskTitle: string;
     @Prop() description: string;
     @Prop() date: string;
-    @Prop({ reflect: true }) displayNone: boolean;
 
     render() {
         return (

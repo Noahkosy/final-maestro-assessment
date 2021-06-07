@@ -17,14 +17,6 @@ p {
     margin: 2px;
 }
 
-task-card {
-    &[display-none] {
-        .card {
-            display: none;
-        }
-    }
-}
-
 .card {
     position: relative;
     background-color: white;
