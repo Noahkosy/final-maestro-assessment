@@ -34,6 +34,7 @@ export class TaskDataService {
 // Found this when I was perusing the firebase docs. The arrow function is only supposed to pull tasks whose
 // completed property is set to false. Thought it cleaned up some of the code
 // in my dashboard component. Will this work better than what is currently there?
+// Link to doc: https://github.com/angular/angularfire/blob/master/docs/firestore/querying-collections.md
  
 // getTasks():Observable<Task[]>{
 //   return this.firestore.collection("tasks", ref => ref.where("completed", "==", false)).get() as any as Observable<Task[]>
