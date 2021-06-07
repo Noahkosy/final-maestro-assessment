@@ -9,23 +9,23 @@ import { Task } from '../../shared/Interfaces/task-interface';
 export class TaskDataService {
     constructor(public firestore: AngularFirestore) {}
 
-    createTask(data) {
-        return this.firestore.collection('tasks').add(data);
+    createTask(data): Promise<Task> {
+        return (this.firestore.collection('tasks').add(data) as any) as Promise<Task>;
     }
 
     getTasks(): Observable<Task[]> {
         return (this.firestore.collection('tasks').valueChanges({ idField: 'taskid' }) as any) as Observable<Task[]>;
     }
 
-    getDoc(id: string): any {
-        return this.firestore.collection('tasks').doc(id).get();
+    getDoc(id: string): Observable<Task> {
+        return (this.firestore.collection('tasks').doc(id).get() as any) as Observable<Task>;
     }
 
-    updateTask(data: Task, id) {
+    updateTask(data: Task, id: string): Promise<void> {
         return this.firestore.collection('tasks').doc(id).set(data);
     }
 
-    deleteTask(id) {
+    deleteTask(id: string): Promise<void> {
         return this.firestore.collection('tasks').doc(id).delete();
     }
 }

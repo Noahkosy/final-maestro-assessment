@@ -25,7 +25,7 @@ export class TaskDetailComponent implements OnInit {
         this.id = this.activatedRoute.snapshot.paramMap.get('id');
     }
 
-    async markCompleted() {
+    async markCompleted(): Promise<void> {
         await this.taskdata.updateTask(
             {
                 taskTitle: this.task.taskTitle,
@@ -35,6 +35,7 @@ export class TaskDetailComponent implements OnInit {
                 description: this.task.description,
                 notes: this.task.notes,
                 completed: true,
+                taskid: null,
             },
             this.id
         );

@@ -20,7 +20,7 @@ export class myDatePipe {
         'Evening Star',
     ];
 
-    transform(str) {
+    transform(str: string): string {
         const noDate = 'No due date.';
         if (!str) {
             return noDate;

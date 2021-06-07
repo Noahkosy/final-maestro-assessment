@@ -12,3 +12,5 @@ export function futureDateValidation(ctrl: AbstractControl) {
         return;
     }
 }
+
+// When specifying a return type on a function that has multiple options (here we have boolean, object, or nothing) how do you reflect that in typescript?
