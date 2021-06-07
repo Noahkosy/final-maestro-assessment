@@ -7,8 +7,7 @@ form {
     height: 740px;
 
     margin: 0px auto;
-    padding: 1em;
-    border: 2px solid var(--app-border-primary);
+    border: 1px solid var(--app-border-primary);
     border-radius: 5px;
 
     background-color: var(--app-bg-secondary-color);
@@ -16,16 +15,48 @@ form {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    justify-items: center;
+
+    textarea {
+        height: 90px;
+        resize: none;
+    }
+
+    input {
+        &[id='pic'] {
+            border: 1px dashed var(--app-border-primary);
+        }
+
+        &[id='name'],
+        &[id='date'] {
+            width: 150px;
+        }
+    }
 
     input,
     textarea {
+        box-sizing: border-box;
         display: block;
-        font: 16px 'Roboto', sans-serif;
         width: 480px;
-        border: 2px solid var(--app-border-primary);
+
+        font: 16px 'Roboto', sans-serif;
+
+        border: 1px solid var(--app-border-primary);
         border-radius: 5px;
+
         padding: 8px;
+    }
+}
+
+form-field {
+    box-sizing: border-box;
+    margin: 0px 56px 0px 56px;
+
+    &[for='name'] {
+        margin-top: 59px;
+    }
+
+    &[for='notes'] {
+        margin-bottom: 61px;
     }
 }
 
