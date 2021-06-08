@@ -21,29 +21,29 @@ form {
         resize: none;
     }
 
-    input {
-        &[id='pic'] {
-            border: 1px dashed var(--app-border-primary);
-        }
-
-        &[id='name'],
-        &[id='date'] {
-            width: 150px;
-        }
-    }
-
-    input,
+    form-field input,
     textarea {
         box-sizing: border-box;
         display: block;
         width: 480px;
 
         font: 16px 'Roboto', sans-serif;
+        color: var(--app-text-primary);
 
         border: 1px solid var(--app-border-primary);
         border-radius: 5px;
 
         padding: 8px;
+
+        &.dsh--border {
+            border: 1px dashed var(--app-border-primary);
+        }
+    }
+
+    form-field {
+        .inpt--small {
+            width: 150px;
+        }
     }
 }
 
@@ -51,11 +51,11 @@ form-field {
     box-sizing: border-box;
     margin: 0px 56px 0px 56px;
 
-    &[for='name'] {
+    &.top--margin {
         margin-top: 59px;
     }
 
-    &[for='notes'] {
+    &.btm--margin {
         margin-bottom: 61px;
     }
 }

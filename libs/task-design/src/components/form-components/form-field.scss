@@ -1,10 +1,11 @@
+@import '../../../../../apps/web/src/app/shared/styles/buttons.scss';
+
 form-field {
     label {
+        @extend %label-shared;
         display: inline-block;
+        font-weight: 400;
         margin-bottom: 7px;
-        font: Roboto;
-        font-size: 12px;
-        color: #9ea0a5;
     }
 
     .error-message {
