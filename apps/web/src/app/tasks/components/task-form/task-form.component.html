@@ -8,36 +8,37 @@
 <main>
     <form id="task-form" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
         <form-field
-            label="Task Name*"
+            class="top--margin"
+            label="task name*"
             for="name"
             error-message="Please provide a name for your task."
             [showError]="isInvalid('taskTitle')"
         >
-            <input type="text" id="name" formControlName="taskTitle" />
+            <input class="inpt--small" type="text" id="name" formControlName="taskTitle" />
         </form-field>
 
-        <form-field label="Thumbnail" for="pic">
-            <input type="file" id="pic" formControlName="thumbnail" />
+        <form-field label="thumbnail" for="pic">
+            <input class="dsh--border" type="file" id="pic" formControlName="thumbnail" />
         </form-field>
 
-        <form-field label="Tags" for="tags">
-            <input type="text" id="tags" formControlName="labels" />
-        </form-field>
-
-        <form-field label="Description" for="description">
+        <form-field label="description" for="description">
             <textarea type="text" id="description" formControlName="description"></textarea>
         </form-field>
 
+        <form-field label="labels" for="labels">
+            <input type="text" id="labels" formControlName="labels" />
+        </form-field>
+
         <form-field
-            label="Due Date"
+            label="due date"
             for="date"
             error-message="Date provided is before current date."
             [showError]="isInvalid('dueDate')"
         >
-            <input type="date" placeholder="MM/DD/YYYY" id="date" formControlName="dueDate" />
+            <input class="inpt--small" type="date" placeholder="MM/DD/YYYY" id="date" formControlName="dueDate" />
         </form-field>
 
-        <form-field label="Notes" for="notes">
+        <form-field class="btm--margin" label="notes" for="notes">
             <textarea type="text" id="notes" formControlName="notes"></textarea>
         </form-field>
     </form>

@@ -1,9 +1,5 @@
+@import '../../../../../apps/web/src/app/shared/styles/buttons.scss';
+
 .label {
-    font-size: 14px;
-    margin: 8px 8px 13px 0px;
-    display: inline-block;
-    padding: 3px 10px;
-    border-radius: 4px;
-    color: white;
-    background-color: #6758f3;
+    @extend %tags-shared;
 }

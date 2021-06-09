@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { TaskDataService } from '../../../core/services/task-data.service';
 import { FormActionEnum } from '../../../shared/Interfaces/form-action.enum';
+import { Task } from '../../../shared/Interfaces/task-interface';
 import { futureDateValidation } from '../../../shared/validators/future-date.validator';
 
 @Component({
@@ -16,8 +17,6 @@ export class TaskFormComponent implements OnInit {
     isEdit: boolean;
 
     id: string;
-
-    test: string = 'test data';
 
     constructor(private taskdata: TaskDataService, private fb: FormBuilder, private activatedRoute: ActivatedRoute) {}
 
@@ -41,7 +40,7 @@ export class TaskFormComponent implements OnInit {
         }
     }
 
-    async onSubmit(data) {
+    async onSubmit(data: Task): Promise<boolean> {
         const title = this.form.get('taskTitle');
         title.markAsTouched({ onlySelf: true });
         if (!this.form.valid) {
@@ -55,12 +54,12 @@ export class TaskFormComponent implements OnInit {
         }
     }
 
-    async deleteTask() {
+    async deleteTask(): Promise<void> {
         await this.taskdata.deleteTask(this.id);
         location.replace('tasks');
     }
 
-    isInvalid(control) {
+    isInvalid(control: string): boolean {
         if ((this.form.get(control).dirty || this.form.get(control).touched) && this.form.get(control).invalid) {
             return true;
         }

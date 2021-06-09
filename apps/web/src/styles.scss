@@ -4,45 +4,49 @@
 @import './css/reset';
 
 :root {
-  // Background //
-  --app-bg-primary-color:#EAEDF3;
-  --app-bg-secondary-color:#FFFFFF;
+    // Background //
+    --app-bg-primary-color: #fbfbfd;
+    --app-bg-secondary-color: #ffffff;
 
-  // Buttons //
-  --app-button-primary-color:#34AA44;
-  --app-button-secondary-color:#FFFFFF;
-  --app-button-danger-color:#E73C1E;
+    // Buttons //
+    --app-button-primary-color: #34aa44;
+    --app-button-secondary-color: #ffffff;
+    --app-button-danger-color: #e73c1e;
 
-  // Button States //
-  --app-button-primary-hover:#31a13f;
-  --app-button-secondary-hover:#f2f2f2;
-  --app-button-danger-hover:#db381b;
+    // Button States //
+    --app-button-primary-hover: #31a13f;
+    --app-button-secondary-hover: #f2f2f2;
+    --app-button-danger-hover: #db381b;
 
-  // Text // 
-  --app-text-primary:#3E3F42;
-  --app-text-secondary:#9EA0A5;
-  --app-text-danger:#E73C1E;
-  --app-text-white:#FFFFFF; 
+    // Text //
+    --app-text-primary: #3e3f42;
+    --app-text-secondary: #9ea0a5;
+    --app-text-danger: #e73c1e;
+    --app-text-white: #ffffff;
 
-  // Borders // 
-  --app-border-primary:#EAEDF3;
-  --app-border-secondary:#00000033;
-
+    // Borders //
+    --app-border-primary: #eaedf3;
+    --app-border-secondary: #00000033;
 }
 
-body{
-  background-color:var(--app-bg-primary-color);
+body {
+    background-color: var(--app-bg-primary-color);
 }
 
-button{
-  outline: none;
+button {
+    outline: none;
 }
 
-h1,h2,h3,h4,h5,h6,p {
-  font-family: 'Roboto-Medium', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: 'Roboto', sans-serif;
 }
 
-.page-title{
-  font-size: 20px;
+.page-title {
+    font-size: 20px;
 }
-

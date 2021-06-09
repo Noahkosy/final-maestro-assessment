@@ -8,3 +8,23 @@
     text-align: center;
     transition: background 250ms ease-in-out, transform 150ms ease;
 }
+
+%label-shared {
+    height: 18px;
+    color: var(--app-text-secondary);
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+%tags-shared {
+    font-size: 14px;
+    margin: 12px 8px 12px 0px;
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: #6758f3;
+}

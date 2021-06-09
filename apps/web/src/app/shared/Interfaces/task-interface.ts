@@ -6,4 +6,5 @@ export interface Task {
     description: string;
     notes: string;
     completed: boolean;
+    taskid: string;
 }

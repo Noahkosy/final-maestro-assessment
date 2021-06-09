@@ -15,7 +15,7 @@ export class FormField {
             <Host>
                 <label htmlFor={this.for}>{this.label}</label>
                 <slot />
-                <span class='error-message'>{this.errorMessage}</span>
+                <p class='error-message'>{this.errorMessage}</p>
             </Host>
         );
     }
