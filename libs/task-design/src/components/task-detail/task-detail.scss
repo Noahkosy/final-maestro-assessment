@@ -4,15 +4,11 @@ svg {
     fill: #9ea0a5;
 }
 
-// If this is removed then the card will break. I have no idea why.
-p {
-    margin: 2px;
-}
-
 // Section Titles
 
 .section-title {
     @extend %label-shared;
+    margin-bottom: 8px;
 }
 
 // Section Content
@@ -22,7 +18,7 @@ p {
     background-color: white;
     width: 592px;
     height: 585px;
-    border: 2px solid #eaedf3;
+    border: 1px solid #eaedf3;
     border-radius: 4px;
     box-sizing: border-box;
     padding: 56px;
@@ -32,28 +28,42 @@ p {
         height: 36%;
         border-radius: 5px;
         background-color: #e1e2e4;
-        margin-bottom: 20px;
     }
 
     .detail-description {
         color: var(--app-text-primary);
         font-size: 14px;
         line-height: 22px;
-        margin-bottom: 20px;
     }
 
     .detail-date {
         font-size: 14px;
-        position: absolute;
-        left: 80px;
-        bottom: 115px;
-    }
-
-    .detail-calendar {
-        margin-bottom: 20px;
+        // position: absolute;
+        // left: 80px;
+        // bottom: 115px;
     }
 
     .detail-notes {
         font-size: 14px;
+    }
+
+    .mrgn--btm {
+        margin-bottom: 24px;
+    }
+}
+
+// Media Queries
+
+@media (max-width: 768px) {
+    .detail-card {
+        width: 375px;
+        height: 496px;
+        padding: 24px;
+        margin-bottom: 164px;
+
+        .detail-img {
+            width: 327px;
+            height: 90px;
+        }
     }
 }

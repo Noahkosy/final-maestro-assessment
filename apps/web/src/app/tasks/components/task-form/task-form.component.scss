@@ -1,6 +1,7 @@
 @import '../../../shared/styles/buttons.scss';
 
 /* Form */
+
 form {
     box-sizing: border-box;
     width: 592px;
@@ -21,8 +22,7 @@ form {
         resize: none;
     }
 
-    form-field input,
-    textarea {
+    .sizing {
         box-sizing: border-box;
         display: block;
         width: 480px;
@@ -49,7 +49,7 @@ form {
 
 form-field {
     box-sizing: border-box;
-    margin: 0px 56px 0px 56px;
+    padding: 0px 56px 0px 56px;
 
     &.top--margin {
         margin-top: 59px;
@@ -108,4 +108,29 @@ form-field {
 .delete-button:hover,
 .delete-button:focus {
     background: var(--app-button-danger-hover);
+}
+
+@media (max-width: 768px) {
+    form {
+        width: 375px;
+        height: 658px;
+    }
+
+    form-field {
+        .sizing {
+            width: 327px;
+        }
+
+        &.top--margin {
+            margin-top: 26px;
+        }
+
+        &.btm--margin {
+            margin-bottom: 12px;
+        }
+    }
+
+    form-field {
+        padding: 0px 20px 0px 20px;
+    }
 }

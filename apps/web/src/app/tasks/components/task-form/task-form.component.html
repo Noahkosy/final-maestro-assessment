@@ -1,8 +1,8 @@
 <nxlp-task-nav>
     <p>Add Task</p>
-    <button class="cancel-button" routerLink="">Cancel</button>
-    <button class="delete-button" (click)="deleteTask()">Delete</button>
-    <button type="submit" class="save-button" form="task-form">Save</button>
+    <button class="cancel-button mob-none" routerLink="">Cancel</button>
+    <button class="delete-button mob-none" (click)="deleteTask()">Delete</button>
+    <button type="submit" class="save-button mob-none" form="task-form">Save</button>
 </nxlp-task-nav>
 
 <main>
@@ -14,19 +14,19 @@
             error-message="Please provide a name for your task."
             [showError]="isInvalid('taskTitle')"
         >
-            <input class="inpt--small" type="text" id="name" formControlName="taskTitle" />
+            <input class="inpt--small sizing" type="text" id="name" formControlName="taskTitle" />
         </form-field>
 
         <form-field label="thumbnail" for="pic">
-            <input class="dsh--border" type="file" id="pic" formControlName="thumbnail" />
+            <input class="dsh--border sizing" type="file" id="pic" formControlName="thumbnail" />
         </form-field>
 
         <form-field label="description" for="description">
-            <textarea type="text" id="description" formControlName="description"></textarea>
+            <textarea class="sizing" type="text" id="description" formControlName="description"></textarea>
         </form-field>
 
         <form-field label="labels" for="labels">
-            <input type="text" id="labels" formControlName="labels" />
+            <input class="sizing" type="text" id="labels" formControlName="labels" />
         </form-field>
 
         <form-field
@@ -35,11 +35,23 @@
             error-message="Date provided is before current date."
             [showError]="isInvalid('dueDate')"
         >
-            <input class="inpt--small" type="date" placeholder="MM/DD/YYYY" id="date" formControlName="dueDate" />
+            <input
+                class="inpt--small sizing"
+                type="date"
+                placeholder="MM/DD/YYYY"
+                id="date"
+                formControlName="dueDate"
+            />
         </form-field>
 
         <form-field class="btm--margin" label="notes" for="notes">
-            <textarea type="text" id="notes" formControlName="notes"></textarea>
+            <textarea class="sizing" type="text" id="notes" formControlName="notes"></textarea>
         </form-field>
     </form>
 </main>
+
+<nxlp-task-footer>
+    <button class="cancel-button" routerLink="">Cancel</button>
+    <button class="delete-button" (click)="deleteTask()">Delete</button>
+    <button type="submit" class="save-button" form="task-form">Save</button>
+</nxlp-task-footer>

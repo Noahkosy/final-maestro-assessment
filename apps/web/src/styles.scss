@@ -47,6 +47,16 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
+p {
+    font-weight: 400;
+}
+
 .page-title {
     font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .mob-none {
+        display: none;
+    }
 }

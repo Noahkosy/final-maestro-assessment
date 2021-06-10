@@ -34,3 +34,17 @@
 .edit-button:focus {
     background: #f2f2f2;
 }
+
+@media (max-width: 768px) {
+    .mob-none {
+        display: none;
+    }
+
+    .complete-button {
+        margin-right: 0px;
+    }
+
+    .edit-button {
+        margin-left: 119px;
+    }
+}

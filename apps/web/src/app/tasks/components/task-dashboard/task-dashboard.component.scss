@@ -40,3 +40,17 @@ button:focus {
         cursor: pointer;
     }
 }
+
+.lscreen-none {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        gap: 20px;
+    }
+
+    .lscreen-none {
+        display: initial;
+    }
+}

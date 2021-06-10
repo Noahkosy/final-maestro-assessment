@@ -1,7 +1,7 @@
 <nxlp-task-nav>
     <p>{{ task.taskTitle }}</p>
-    <button class="edit-button" routerLink="edit">Edit</button>
-    <button class="complete-button" (click)="markCompleted()">Mark as Complete</button>
+    <button class="edit-button mob-none" routerLink="edit">Edit</button>
+    <button class="complete-button mob-none" (click)="markCompleted()">Mark as Complete</button>
 </nxlp-task-nav>
 
 <main class="container">
@@ -9,3 +9,8 @@
         <p slot="date-placement">{{ task.dueDate | myDatePipe }}</p>
     </task-detail>
 </main>
+
+<nxlp-task-footer>
+    <button class="edit-button" routerLink="edit">Edit</button>
+    <button class="complete-button" (click)="markCompleted()">Mark as Complete</button>
+</nxlp-task-footer>
