@@ -1,4 +1,4 @@
-@import '../../../shared/styles/buttons.scss';
+@import '../../../shared/styles/extensions.scss';
 
 .container {
     display: grid;
@@ -35,7 +35,25 @@
     background: #f2f2f2;
 }
 
+task-detail {
+    position: relative;
+    background-color: white;
+    width: 592px;
+    height: 585px;
+    border: 1px solid #eaedf3;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 56px;
+}
+
 @media (max-width: 768px) {
+    task-detail {
+        width: 375px;
+        height: 496px;
+        padding: 24px;
+        margin-bottom: 164px;
+    }
+
     .mob-none {
         display: none;
     }

@@ -1,15 +1,15 @@
-@import '../../../shared/styles/buttons.scss';
+@import '../../../shared/styles/extensions.scss';
 
-svg {
+.plus-svg {
     fill: var(--app-button-primary-color);
     margin-right: 10px;
 }
 
 button svg {
-    fill: #ffffff;
+    fill: var(--app-button-secondary-color);
 }
 
-button {
+.add-button {
     @extend %button-shared;
     border: none;
     padding: 0.5rem 1rem;
@@ -18,11 +18,6 @@ button {
     color: var(--app-text-white);
     display: flex;
     align-items: center;
-}
-
-button:hover,
-button:focus {
-    background: var(--app-button-primary-hover);
 }
 
 .container {
@@ -41,7 +36,7 @@ button:focus {
     }
 }
 
-.lscreen-none {
+.lap-none {
     display: none;
 }
 
@@ -50,7 +45,7 @@ button:focus {
         gap: 20px;
     }
 
-    .lscreen-none {
+    .lap-none {
         display: initial;
     }
 }
