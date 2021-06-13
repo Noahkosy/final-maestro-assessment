@@ -1,11 +1,7 @@
-svg {
+.calendar-svg {
     fill: #9ea0a5;
     position: absolute;
     bottom: 14px;
-}
-
-p {
-    margin: 2px;
 }
 
 .card {
@@ -23,6 +19,7 @@ p {
         height: 36%;
         border-radius: 5px;
         background-color: #e1e2e4;
+        margin-bottom: 8px;
     }
 
     .card-title {

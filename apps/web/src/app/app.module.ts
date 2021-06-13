@@ -11,6 +11,7 @@ import { myDatePipe } from './shared/pipes/my-date.pipe';
 import { SharedModule } from './shared/shared.module';
 import { TaskDashboardComponent } from './tasks/components/task-dashboard/task-dashboard.component';
 import { TaskDetailComponent } from './tasks/components/task-detail/task-detail.component';
+import { TaskFooterComponent } from './tasks/components/task-footer/task-footer.component';
 import { TaskFormComponent } from './tasks/components/task-form/task-form.component';
 import { TaskNavComponent } from './tasks/components/task-nav/task-nav.component';
 
@@ -21,6 +22,7 @@ import { TaskNavComponent } from './tasks/components/task-nav/task-nav.component
         TaskFormComponent,
         TaskDetailComponent,
         TaskNavComponent,
+        TaskFooterComponent,
         myDatePipe,
     ],
     imports: [

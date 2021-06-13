@@ -1,0 +1,95 @@
+body {
+    background-color: var(--app-bg-primary-color);
+}
+
+nav {
+    background-color: var(--app-bg-secondary-color);
+    display: grid;
+    box-sizing: border-box;
+    height: 70px;
+    grid-template-columns: 40% auto 40%;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid var(--app-border-primary);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'left right';
+    align-items: center;
+
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+
+    background-color: var(--app-bg-secondary-color);
+
+    box-sizing: border-box;
+    height: 70px;
+
+    padding: 16px 20px;
+    border-top: 1px solid var(--app-border-primary);
+
+    visibility: hidden;
+}
+
+form {
+    box-sizing: border-box;
+    max-width: 592px;
+    max-height: 740px;
+
+    margin: 0px auto;
+    border: 1px solid var(--app-border-primary);
+    border-radius: 5px;
+
+    background-color: var(--app-bg-secondary-color);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+textarea {
+    height: 90px;
+    resize: none;
+}
+
+button {
+    outline: none;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: var(--app-text-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        margin: 0px auto 12px auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'logo button';
+    }
+
+    footer {
+        visibility: initial;
+    }
+}

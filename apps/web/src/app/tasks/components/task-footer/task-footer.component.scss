@@ -1,0 +1,8 @@
+.left {
+    grid-area: left;
+}
+
+.right {
+    grid-area: right;
+    justify-self: end;
+}

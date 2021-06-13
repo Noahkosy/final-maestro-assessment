@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import '../../web/src/app/shared/styles/elements.scss';
 @import '../../../libs/ui/fonts/font.css';
 @import './css/reset';
 
@@ -29,24 +29,12 @@
     --app-border-secondary: #00000033;
 }
 
-body {
-    background-color: var(--app-bg-primary-color);
-}
-
-button {
-    outline: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    font-family: 'Roboto', sans-serif;
-}
-
 .page-title {
     font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .mob-none {
+        display: none;
+    }
 }

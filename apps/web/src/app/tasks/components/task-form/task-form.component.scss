@@ -1,55 +1,34 @@
-@import '../../../shared/styles/buttons.scss';
+@import '../../../shared/styles/extensions.scss';
 
 /* Form */
-form {
-    box-sizing: border-box;
-    width: 592px;
-    height: 740px;
 
-    margin: 0px auto;
+.sizing {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+
+    font: 16px 'Roboto', sans-serif;
+    color: var(--app-text-primary);
+
     border: 1px solid var(--app-border-primary);
     border-radius: 5px;
 
-    background-color: var(--app-bg-secondary-color);
+    padding: 8px;
 
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-
-    textarea {
-        height: 90px;
-        resize: none;
+    &.dsh--border {
+        border: 1px dashed var(--app-border-primary);
     }
+}
 
-    form-field input,
-    textarea {
-        box-sizing: border-box;
-        display: block;
-        width: 480px;
-
-        font: 16px 'Roboto', sans-serif;
-        color: var(--app-text-primary);
-
-        border: 1px solid var(--app-border-primary);
-        border-radius: 5px;
-
-        padding: 8px;
-
-        &.dsh--border {
-            border: 1px dashed var(--app-border-primary);
-        }
-    }
-
-    form-field {
-        .inpt--small {
-            width: 150px;
-        }
+form-field {
+    .inpt--small {
+        width: 150px;
     }
 }
 
 form-field {
     box-sizing: border-box;
-    margin: 0px 56px 0px 56px;
+    padding: 0px 56px 0px 56px;
 
     &.top--margin {
         margin-top: 59px;
@@ -108,4 +87,20 @@ form-field {
 .delete-button:hover,
 .delete-button:focus {
     background: var(--app-button-danger-hover);
+}
+
+@media (max-width: 592px) {
+    form-field {
+        &.top--margin {
+            margin-top: 26px;
+        }
+
+        &.btm--margin {
+            margin-bottom: 12px;
+        }
+    }
+
+    form-field {
+        padding: 0px 20px 0px 20px;
+    }
 }
