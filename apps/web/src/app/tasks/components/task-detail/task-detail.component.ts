@@ -36,6 +36,7 @@ export class TaskDetailComponent implements OnInit {
                 notes: this.task.notes,
                 completed: true,
                 taskid: null,
+                data: null,
             },
             this.id
         );

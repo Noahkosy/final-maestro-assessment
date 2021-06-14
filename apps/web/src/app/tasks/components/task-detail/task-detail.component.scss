@@ -8,9 +8,10 @@
 // Mark as Complete
 .complete-button {
     @extend %button-shared;
-    border: none;
+
     padding: 0.5rem 1rem;
     margin-right: 14px;
+
     background: var(--app-button-primary-color);
     color: var(--app-text-white);
 }
@@ -23,10 +24,12 @@
 // Edit Button
 .edit-button {
     @extend %button-shared;
-    border: 1px solid #eaedf3;
+
     padding: 0.5rem 1rem;
     margin-right: 16px;
+
     background: var(--app-bg-secondary-color);
+    border: 1px solid #eaedf3;
     color: #000000;
 }
 
@@ -36,20 +39,23 @@
 }
 
 task-detail {
-    position: relative;
-    background-color: white;
+    box-sizing: border-box;
+
     width: 592px;
     height: 585px;
+    padding: 56px;
+
+    background-color: white;
     border: 1px solid #eaedf3;
     border-radius: 4px;
-    box-sizing: border-box;
-    padding: 56px;
 }
 
 @media (max-width: 768px) {
     task-detail {
-        width: 375px;
+        width: 100%;
+        max-width: 592px;
         height: 496px;
+
         padding: 24px;
         margin-bottom: 164px;
     }
