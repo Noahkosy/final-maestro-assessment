@@ -17,6 +17,7 @@
     .detail-img {
         width: 100%;
         height: 36%;
+
         border-radius: 5px;
         background-color: #e1e2e4;
     }
@@ -29,9 +30,6 @@
 
     .detail-date {
         font-size: 14px;
-        // position: absolute;
-        // left: 80px;
-        // bottom: 115px;
     }
 
     .detail-notes {
@@ -48,7 +46,7 @@
 @media (max-width: 768px) {
     .detail-card {
         .detail-img {
-            width: 327px;
+            width: 100%;
             height: 90px;
         }
     }

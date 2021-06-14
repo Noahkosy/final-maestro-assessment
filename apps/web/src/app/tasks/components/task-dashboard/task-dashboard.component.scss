@@ -11,13 +11,14 @@ button svg {
 
 .add-button {
     @extend %button-shared;
-    border: none;
-    padding: 0.5rem 1rem;
-    margin-right: 14px;
-    background: var(--app-button-primary-color);
-    color: var(--app-text-white);
+
     display: flex;
     align-items: center;
+    padding: 0.5rem 1rem;
+    margin-right: 14px;
+
+    background: var(--app-button-primary-color);
+    color: var(--app-text-white);
 }
 
 .container {

@@ -1,8 +1,9 @@
 .check-svg {
-    fill: var(--app-button-primary-color);
-    margin-right: 16px;
     position: relative;
     bottom: 2px;
+    margin-right: 16px;
+
+    fill: var(--app-button-primary-color);
 }
 
 .page-title {
@@ -14,11 +15,13 @@
 }
 
 .logo {
-    font-size: 16px;
-    padding-left: 14px;
-    cursor: pointer;
     display: flex;
     align-items: center;
+    padding-left: 14px;
+
+    font-size: 16px;
+
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
