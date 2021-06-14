@@ -1,4 +1,3 @@
-import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TaskDataService } from '../../../core/services/task-data.service';
