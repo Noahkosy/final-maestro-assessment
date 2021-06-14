@@ -1,3 +1,4 @@
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TaskDataService } from '../../../core/services/task-data.service';
@@ -36,6 +37,7 @@ export class TaskDetailComponent implements OnInit {
                 notes: this.task.notes,
                 completed: true,
                 taskid: null,
+                data: null,
             },
             this.id
         );

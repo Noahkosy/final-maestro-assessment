@@ -1,10 +1,12 @@
 %button-shared {
     box-sizing: border-box;
+    text-align: center;
+
     border-radius: 4px;
     text-decoration: none;
     font-size: 0.85rem;
     cursor: pointer;
-    text-align: center;
+
     transition: background 250ms ease-in-out, transform 150ms ease;
 }
 
@@ -18,10 +20,11 @@
 }
 
 %tags-shared {
-    font-size: 14px;
-    margin: 0px 8px 12px 0px;
     display: inline-block;
+    margin: 0px 8px 12px 0px;
     padding: 3px 10px;
+
+    font-size: 14px;
     border-radius: 4px;
     color: white;
     background-color: #6758f3;

@@ -7,4 +7,5 @@ export interface Task {
     notes: string;
     completed: boolean;
     taskid: string;
+    data: any;
 }
