@@ -40,8 +40,8 @@ form {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    max-height: 740px;
     max-width: 592px;
+    max-height: 740px;
     margin: 0px auto;
 
     border: 1px solid var(--app-border-primary);

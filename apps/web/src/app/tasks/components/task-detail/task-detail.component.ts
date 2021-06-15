@@ -13,6 +13,8 @@ export class TaskDetailComponent implements OnInit {
 
     id: string;
 
+    name: string;
+
     constructor(
         private route: ActivatedRoute,
         private taskdata: TaskDataService,
