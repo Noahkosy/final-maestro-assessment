@@ -2,7 +2,6 @@
 
 .container {
     display: grid;
-    justify-content: center;
 }
 
 // Mark as Complete
@@ -40,10 +39,12 @@
 
 task-detail {
     box-sizing: border-box;
+    width: 100%;
+    max-width: 592px;
 
-    width: 592px;
     height: 585px;
     padding: 56px;
+    margin: 0px auto;
 
     background-color: white;
     border: 1px solid #eaedf3;
@@ -52,12 +53,9 @@ task-detail {
 
 @media (max-width: 768px) {
     task-detail {
-        width: 100%;
-        max-width: 592px;
+        min-width: 375px;
         height: 496px;
-
         padding: 24px;
-        margin-bottom: 164px;
     }
 
     .mob-none {
